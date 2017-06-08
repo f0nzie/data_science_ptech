@@ -1,7 +1,8 @@
 --- 
 title: "Data Science for Petroleum Production Engineers"
 author: "Alfonso R. Reyes"
-date: "`r Sys.Date()`"
+# date: "`r Sys.Date()`"
+date: "v 0.1.3"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
