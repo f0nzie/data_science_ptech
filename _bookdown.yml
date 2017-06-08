@@ -6,5 +6,6 @@ output_dir: "docs"
 rmd_files: ["index.Rmd",
             "p1_ds_for_ppe.Rmd",
             "p2_ds_for_ppe.Rmd",
+            "p3_ds_for_ppe.Rmd",
             "r_and_the_search.Rmd"
             ]
