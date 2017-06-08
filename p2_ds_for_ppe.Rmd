@@ -1,4 +1,5 @@
-# $DSP^2E$ - Acquiring the Data
+# DSPPE - Acquiring the Data (part 2)
+
 
 ```{r echo=FALSE}
 knitr::include_graphics(rep("images/logo_p2.jpg", 1))
@@ -26,11 +27,12 @@ After the script finishes gathering data from the last well you will end up with
 ![](./images/multiwells.jpg)
 
 
-## Excel
+## The Excel way :(
 
 Yes, it is Excel. But we just use it as a legacy so any production technologist can see the output without much complication. Some have questioned why we do all this data processing with Python instead of using Excel. The question is very simple, and I think you will quickly understand if you have ever worked with datasets in Excel. I will just cite few of the inconveniences: (1) the macros VBA are alright if you are writing less than a hundred of lines of code; (2) the code in VBA is difficult to maintain and there is no version control like with git or other; (3) Microsoft VBA has its own way of doing things and you have to learn a lot about the internals of the MS libraries if you want to do little above of the ordinary calculations and plotting; (4) VBA code is difficult to share with colleagues and when you make a change or update the code you have to send again the big workbook, in other words there is no updating process embedded within Excel and VBA. Don't get me wrong. I have done terrific things with Excel VBA but it is painful by the lack of an engineering or scientific community behind as is the case with Python. Let's say that Excel is good at table visualization and anybody can open and understand it.
 
 But as you get immersed with Python and pandas you will see that using Excel as data containers is purely optional; there are other powerful data structures available out there.
+
 
 ## Scripting in Python
 
@@ -68,6 +70,7 @@ For the IPR methods that were used on each of the well models:
 And for the PVT correlations:
 
 ![](./images/pvt_corrs.jpg)
+
 
 ## What are we learning so far?
 

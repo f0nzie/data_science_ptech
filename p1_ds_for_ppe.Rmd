@@ -1,5 +1,5 @@
 
-# Data Science for Petroleum Production Engineering. Part I
+# Data Science for Petroleum Production Engineering (part 1)
 
 ```{r echo=FALSE}
 knitr::include_graphics(rep("images/p1_cover.jpg", 1))
