@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Science for Petroleum Production Engineers</title>
+  <meta name="description" content="This is the start of the book of a simple data science book.">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Science for Petroleum Production Engineers" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the start of the book of a simple data science book." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science for Petroleum Production Engineers" />
+  
+  <meta name="twitter:description" content="This is the start of the book of a simple data science book." />
+  
+
+<meta name="author" content="Alfonso R. Reyes">
+
+
+<meta name="date" content="2017-06-07">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="part-2-data-science-for-petroleum-production-engineering.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">The Zero Draft Book </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
+<li class="chapter" data-level="2" data-path="data-science-for-petroleum-production-engineering.html"><a href="data-science-for-petroleum-production-engineering.html"><i class="fa fa-check"></i><b>2</b> Data Science for Petroleum Production Engineering</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-science-for-petroleum-production-engineering.html"><a href="data-science-for-petroleum-production-engineering.html#the-old-vs-the-new"><i class="fa fa-check"></i><b>2.1</b> The Old vs the New</a></li>
+<li class="chapter" data-level="2.2" data-path="data-science-for-petroleum-production-engineering.html"><a href="data-science-for-petroleum-production-engineering.html#why-does-it-take-so-long-to-build-optimization-models"><i class="fa fa-check"></i><b>2.2</b> Why does it take so long to build optimization models?</a></li>
+<li class="chapter" data-level="2.3" data-path="data-science-for-petroleum-production-engineering.html"><a href="data-science-for-petroleum-production-engineering.html#data-structures-are-our-friends"><i class="fa fa-check"></i><b>2.3</b> Data Structures are our friends</a></li>
+<li class="chapter" data-level="2.4" data-path="data-science-for-petroleum-production-engineering.html"><a href="data-science-for-petroleum-production-engineering.html#remember-garbage-in-garbage-out"><i class="fa fa-check"></i><b>2.4</b> Remember Garbage In, Garbage Out</a></li>
+<li class="chapter" data-level="2.5" data-path="data-science-for-petroleum-production-engineering.html"><a href="data-science-for-petroleum-production-engineering.html#the-python-notebooks-are-a-fit-for-production-engineers"><i class="fa fa-check"></i><b>2.5</b> The Python notebooks are a fit for production engineers</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="part-2-data-science-for-petroleum-production-engineering.html"><a href="part-2-data-science-for-petroleum-production-engineering.html"><i class="fa fa-check"></i><b>3</b> Part 2: Data Science for Petroleum Production Engineering</a><ul>
+<li class="chapter" data-level="3.1" data-path="part-2-data-science-for-petroleum-production-engineering.html"><a href="part-2-data-science-for-petroleum-production-engineering.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="part-2-data-science-for-petroleum-production-engineering.html"><a href="part-2-data-science-for-petroleum-production-engineering.html#multiwell-scanning"><i class="fa fa-check"></i><b>3.2</b> Multiwell Scanning</a></li>
+<li class="chapter" data-level="3.3" data-path="part-2-data-science-for-petroleum-production-engineering.html"><a href="part-2-data-science-for-petroleum-production-engineering.html#dataframes"><i class="fa fa-check"></i><b>3.3</b> Dataframes</a></li>
+<li class="chapter" data-level="3.4" data-path="part-2-data-science-for-petroleum-production-engineering.html"><a href="part-2-data-science-for-petroleum-production-engineering.html#excel"><i class="fa fa-check"></i><b>3.4</b> Excel</a></li>
+<li class="chapter" data-level="3.5" data-path="part-2-data-science-for-petroleum-production-engineering.html"><a href="part-2-data-science-for-petroleum-production-engineering.html#scripting-in-python"><i class="fa fa-check"></i><b>3.5</b> Scripting in Python</a></li>
+<li class="chapter" data-level="3.6" data-path="part-2-data-science-for-petroleum-production-engineering.html"><a href="part-2-data-science-for-petroleum-production-engineering.html#what-are-we-learning-so-far"><i class="fa fa-check"></i><b>3.6</b> What are we learning so far?</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><i class="fa fa-check"></i><b>4</b> “R” and the search of the ideal language for petroleum engineering</a><ul>
+<li class="chapter" data-level="4.1" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#the-fun-of-the-21st-century"><i class="fa fa-check"></i><b>4.1</b> The fun of the 21st century</a></li>
+<li class="chapter" data-level="4.2" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#what-is-r"><i class="fa fa-check"></i><b>4.2</b> What is R?</a></li>
+<li class="chapter" data-level="4.3" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#ploting"><i class="fa fa-check"></i><b>4.3</b> Ploting</a></li>
+<li class="chapter" data-level="4.4" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#packages"><i class="fa fa-check"></i><b>4.4</b> Packages</a></li>
+<li class="chapter" data-level="4.5" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#foreign-languages"><i class="fa fa-check"></i><b>4.5</b> Foreign languages</a></li>
+<li class="chapter" data-level="4.6" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#reproducible"><i class="fa fa-check"></i><b>4.6</b> Reproducible</a></li>
+<li class="chapter" data-level="4.7" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#gui-not"><i class="fa fa-check"></i><b>4.7</b> GUI not</a></li>
+<li class="chapter" data-level="4.8" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#where-is-everybody"><i class="fa fa-check"></i><b>4.8</b> Where is everybody</a></li>
+<li class="chapter" data-level="4.9" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#the-bottom-line"><i class="fa fa-check"></i><b>4.9</b> The bottom line</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science for Petroleum Production Engineers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-science-for-petroleum-production-engineering" class="section level1">
+<h1><span class="header-section-number">2</span> Data Science for Petroleum Production Engineering</h1>
+<div id="the-old-vs-the-new" class="section level2">
+<h2><span class="header-section-number">2.1</span> The Old vs the New</h2>
+<p>In the last century, the production engineer built the well models one by one and analyzed the results also one by one. With the ubiquity of the personal computer, desktops and laptops, an unimaginable computational power has been put in our hands. But we need the right tools!</p>
+<p>Why -if we communicate data at gigabits per second-, are we still using a tool of the era of bits per second?</p>
+<p>The spreadsheet was invented in the 80’s and was a great invention. The beauty of it is that you can produce results right away. We are very thankful to Lotus 1-2-3 and Microsoft Excel for that. But let us remember that it was the 80’s –there was not internet, no tablets, data moved at 2400 bps, and real-time data acquisition was constrained to a handful of fields. Today, well data comes in gigabytes per minute and we know it is not humanly possible to tackle all the information to put it at good use.</p>
+<p>The answer of this century is to that is start using automation, artificial intelligence, statistics, machine learning but first of all, data science. These are the keywords of the future. The future of the petroleum engineer.</p>
+</div>
+<div id="why-does-it-take-so-long-to-build-optimization-models" class="section level2">
+<h2><span class="header-section-number">2.2</span> Why does it take so long to build optimization models?</h2>
+<p>One of the things that always intrigued the production managers what is it that takes so long to build well models and a network models? One of the causes is that we have to enter the data manually; we have to double and triple check the data we are entering, calibrate and match the model; and – the most important of all-, we do enter the data without a context. What does that mean? It means we work on a well model in isolation without having the tools to validate our well data in the context of the field data or of other wells data (neighbors). Then when we have all our 77 or 177 wells ready, we received fresh well test data that contradicts earlier well tests! Go back to rework some models.</p>
+<p>Part of this conundrum is not the production engineer’s fault; it is just the way that well optimization software works or has been built: to attack a well one at a time and disconnected from the test data source.</p>
+<p>At Petronas we have been using for a while Python scripts to help to address the problem of single well modeling in a radical different way: by building well models with multiwell scanning, validation and analysis. With these techniques the engineer minimizes the manual data entering, validation, calibration and data qualification. This by itself represents a major advantage over the traditional way of doing well and network modeling. The additional power and discovery of oil gains from production optimization comes from applying basic statistics to the results or the calculations or simulation runs. </p>
+<p>The plots that you see in this post are just few samples of the work of well and network modeling on a field. I have changed names and numbers to make the exercise neutral.</p>
+<p>None of this is earth shattering new; it has been around for years but the digital tools that are making technology companies successful are taking time to take off in the production engineering field. Well, first, data science is hard. But enormously gratifying when you find hidden oil.</p>
+</div>
+<div id="data-structures-are-our-friends" class="section level2">
+<h2><span class="header-section-number">2.3</span> Data Structures are our friends</h2>
+<p>One of the keys in data science is to get accustomed to analyze well production data by using dynamic tables. There is no best tool for analyzing production engineering data than Python Pandas. The pandas tables (yes, it is written in lowercase) are a magnificent object to manipulate, arrange, organize, calculate, clean, select, filter, analyze and plotting our production data. We created the Petronas PTech Engineering Library that includes dozens of scripts that make use of pandas and other Pythons packages such as numpy, scipy, matplotlib, PyQt4, pyqtgraph, bokeh, traits, etc.  With the help of the libraries the engineer is able to analyze the well model data faster and in a more reliably way since all these tasks are done by algorithms written in Python, the world’s leading scripting language for scientists and engineers. And, it is open source.</p>
+<p>Your are curious? This is how a simple statement looks like.</p>
+<p>From the data we can say that the biggest producers are wells producing by gas lift with an average of 944 blpd (barrels of liquid per day), a maximum of 2421 blpd in a total of 98 wells. The lowest producer is at 100 blpd.</p>
+</div>
+<div id="remember-garbage-in-garbage-out" class="section level2">
+<h2><span class="header-section-number">2.4</span> Remember Garbage In, Garbage Out</h2>
+<p>In next posts I will be showing simple Python and pandas scripts for petroleum production engineering. What we see in the next plot is a plotting technique for quality control of the well test data to be used in the well models. Before we run the models it is recommended that you run some scripts to qualify the data such as finding outliers or data points that do not belong there.</p>
+</div>
+<div id="the-python-notebooks-are-a-fit-for-production-engineers" class="section level2">
+<h2><span class="header-section-number">2.5</span> The Python notebooks are a fit for production engineers</h2>
+<p>The Python notebooks look ideal for the application of data science to well, network modeling and production optimization. There are many ways of running Python but I find the notebook the best method to transmit knowledge and share solutions with colleagues. The Python notebooks -lately renamed as Jupyter -, are widely known in the engineering community. You shouldn’t have any trouble finding assistance online. The same applies to Python. My favorite is stackoverflow.com. There are hundreds of engineering and scientific libraries around that will help to makes your production engineering job more efficient, accurate, profitable and fun.</p>
+<p>The Python notebook opens in a browser but if you want to make long and advanced scripts for petroleum engineering, there are plenty of good development applications or IDEs out there: Spyder, PyCharm and Eclipse, just to mention a few.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="part-2-data-science-for-petroleum-production-engineering.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/p1_ds_for_ppe.Rmd",
+"text": "Edit"
+},
+"download": ["data_science_ptech.pdf", "data_science_ptech.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

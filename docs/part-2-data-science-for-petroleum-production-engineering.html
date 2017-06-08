@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="part-1-data-science-for-petroleum-production-engineering.html">
+<link rel="prev" href="part-1-data-science-for-petroleum-production-engineering.html">
+<link rel="next" href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -150,27 +150,54 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Data Science for Petroleum Production Engineers</h1>
-<h4 class="author"><em>Alfonso R. Reyes</em></h4>
-<h4 class="date"><em>2017-06-07</em></h4>
+<div id="part-2-data-science-for-petroleum-production-engineering" class="section level1">
+<h1><span class="header-section-number">2</span> Part 2: Data Science for Petroleum Production Engineering</h1>
+<div id="introduction" class="section level2">
+<h2><span class="header-section-number">2.1</span> Introduction</h2>
+<p>In the past session we got an introduction to the multiwell statistics package showing a few of the things that we can do with the Petronas PTech Engineering Library. Now, we will explore some more functionality. It is incredible the huge amount of information when we get from all the wells in one scan pass. The data starts to have sense. A well in isolation or standalone doesn’t tell used much about the field or differences between well parameters from well to well. This is where the power of the multiwell scanning resides. </p>
 </div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>This is a <em>sample</em> book written in <strong>Markdown</strong>. You can use anything that Pandoc’s Markdown supports, e.g., a math equation <span class="math inline">\(a^2 + b^2 = c^2\)</span>.</p>
-<p>For now, you have to install the development versions of <strong>bookdown</strong> from Github:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools::<span class="kw">install_github</span>(<span class="st">&quot;rstudio/bookdown&quot;</span>)</code></pre></div>
-<p>Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>.</p>
-<p>To compile this example to PDF, you need to install XeLaTeX.</p>
+<div id="multiwell-scanning" class="section level2">
+<h2><span class="header-section-number">2.2</span> Multiwell Scanning</h2>
+<p>The multiwell scanning is the process by which we use a Python script to automatically open all the well models in the background, pulling the user-defined parameters and create an output file where the rows are the wells and the well parameters are the columns. The scanning open the optimization software, which could be Petex Prosper, AppSmiths WinGLUE or any other that has a way to share its variables outside the application. In the case of Petronas, we adopted as a standard both. In this example I will use use Prosper. This is how a file with the input variables look like:</p>
+<p>These are few of the variables that we want to pull from each of the well models to be scanned. Note that the first 7 columns belong to the decomposition of the Petex OpenServer variables. I created this input file to make possible a repeatable selection process. In one of the datasets we will see 94 variable-columns; in other maybe less than 40. You can also have a set of input workbooks; one for PVT analysis, another for well test, or gas lift, or IPR or VLP selection. In another post I will enter in detail about this input worksheet.</p>
+</div>
+<div id="dataframes" class="section level2">
+<h2><span class="header-section-number">2.3</span> Dataframes</h2>
+<p>After the script finishes gathering data from the last well you will end up with an output file. The tabular form of the data in that output file is what is called in Python pandas a dataframe. The table looks like this:</p>
+</div>
+<div id="excel" class="section level2">
+<h2><span class="header-section-number">2.4</span> Excel</h2>
+<p>Yes, it is Excel. But we just use it as a legacy so any production technologist can see the output without much complication. Some have questioned why we do all this data processing with Python instead of using Excel. The question is very simple, and I think you will quickly understand if you have ever worked with datasets in Excel. I will just cite few of the inconveniences: (1) the macros VBA are alright if you are writing less than a hundred of lines of code; (2) the code in VBA is difficult to maintain and there is no version control like with git or other; (3) Microsoft VBA has its own way of doing things and you have to learn a lot about the internals of the MS libraries if you want to do little above of the ordinary calculations and plotting; (4) VBA code is difficult to share with colleagues and when you make a change or update the code you have to send again the big workbook, in other words there is no updating process embedded within Excel and VBA. Don’t get me wrong. I have done terrific things with Excel VBA but it is painful by the lack of an engineering or scientific community behind as is the case with Python. Let’s say that Excel is good at table visualization and anybody can open and understand it.</p>
+<p>But as you get immersed with Python and pandas you will see that using Excel as data containers is purely optional; there are other powerful data structures available out there.</p>
+</div>
+<div id="scripting-in-python" class="section level2">
+<h2><span class="header-section-number">2.5</span> Scripting in Python</h2>
+<p>The Python script that open the well models and pulls the data is this:</p>
+<p>Each of the lines in the script is explained through a comment above. But let’s briefly explain what this script does. What we are trying to achieve is reading all the Prosper well models located under the folder PISC. You are interested in reading some variables from these models and putting them in a table-like structure for statistical analysis later. These variables have been defined in the input workbook –explained above. </p>
+<p>Loading the dataset</p>
+<p>Now, you have generated yourself a dataset. This dataset contains the data of 100 wells that was just generated by the application multiwell scanner. Let’s load the dataset with this script:</p>
+<p>Immediately with the execution we get some information about the well collection:</p>
+<p>Plotting</p>
+<p>To start plotting, we can just write:</p>
+<p>For artificial lift:</p>
+<p>For the IPR methods that were used on each of the well models:</p>
+<p>0</p>
+<p>And for the PVT correlations:</p>
+</div>
+<div id="what-are-we-learning-so-far" class="section level2">
+<h2><span class="header-section-number">2.6</span> What are we learning so far?</h2>
+<p>At this moment you may be wondering: well modeling is hard; it takes a lot of work. So many variables to take care of. Yes, it is. That’s why getting a network model ready for scenarios and simulation takes so long. </p>
+<p>The advantage here, with the Python PTech Library, is that we are acting on multiple wells; not just one. There is a significant reduction in time and improvement in the quality of the data by tackling the problem in this way. But requires a toolbox: the toolbox of the data scientist. You are now using the bleeding edge of the digital tools available to the brightest minds in the world to find more oil; faster and efficiently.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="part-1-data-science-for-petroleum-production-engineering.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="part-1-data-science-for-petroleum-production-engineering.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -199,7 +226,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/p2_ds_for_ppe.Rmd",
 "text": "Edit"
 },
 "download": ["data_science_ptech.pdf", "data_science_ptech.epub"],
