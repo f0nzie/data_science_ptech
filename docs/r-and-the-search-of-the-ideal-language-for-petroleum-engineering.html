@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
+<link rel="prev" href="dsp2e-the-well-network-dataset-part-3.html">
 
-<link rel="next" href="data-science-for-petroleum-production-engineering-part-1.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -164,24 +164,68 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Data Science for Petroleum Production Engineers</h1>
-<h4 class="author"><em>Alfonso R. Reyes</em></h4>
-<h4 class="date"><em>v 0.1.3</em></h4>
+<div id="r-and-the-search-of-the-ideal-language-for-petroleum-engineering" class="section level1">
+<h1><span class="header-section-number">4</span> “R” and the search of the ideal language for petroleum engineering</h1>
+<div class="figure">
+<img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAA2vAAAAJGNhYTk5Y2Q5LWU3NzAtNGYzNC05YTU2LTVhN2UxYWUwZmYwMA.jpg" alt="img" />
+<p class="caption">img</p>
 </div>
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>This is the first draft of the book <code>Data Science for Petroleum Production Engineering</code>. It presents a collection of algorithms, datasets, solutions on practical challenges in the uptream side of the production cycle of oil and gas.</p>
-<p>We use modern tools; data science tools such as Python and R to help us gain a quick understanding of the production data.</p>
+<div id="the-fun-of-the-21st-century" class="section level2">
+<h2><span class="header-section-number">4.1</span> The fun of the 21st century</h2>
+<p>I have to confess my sin. I am coming from writing thousands of lines of Python code for a well modeling and optimization project. I did Exploratory Data Analysis for the resulting well models and applied statistics using Python, pandas, matplotlib, SciPy and NumPy. I went full throttle and didn’t look behind. Got the results, the production engineering team increased the oil production we were looking for. All went fine, with the exception of the sin of not exploring the other alternative: doing the work with “R”. If you haven’t heard about <strong>R</strong> you are missing the fun of the 21st century: <strong>data science</strong>.</p>
+<p>I might not be totally to blame though. Python is a relatively easy to learn scripting language, fast prototyping applications and producing quick results. Also, it has under its domain pretty good engineering and scientific tools. Like the ones I cited above. Plus the statistical packages that have been flourishing over the years.</p>
+</div>
+<div id="what-is-r" class="section level2">
+<h2><span class="header-section-number">4.2</span> What is R?</h2>
+<p>On the other hand, there is <strong>R</strong>, another programming language with the peculiar feature of having been invented by <strong>statisticians</strong> about couple of decades ago. <strong>R</strong> is the preferred open-source language when it comes to publishing research, doctoral papers, statistical analysis, supervised and unsupervised machine learning, regression analysis, forecasting, exploratory data analysis, multivariate plotting or visualization.</p>
+<p><strong>R</strong> can be intimidating. Didn’t I tell you that its users are mostly PhDs? <strong>R</strong> is different of any other language I have seen over the years. And that comes, I believe, from its intense focus on the data, data analysis, statistics and vector oriented operations. After few months spent on learning and working with R, I can tell you that any sweat was worth every penny. It is not only the language itself but the whole <strong>R</strong> <strong>ecosystem</strong> that surrounds it: the data types abstraction; the fact that can be run in interactive mode from a console, or by scripting automatic operations; the enormous plotting capabilities; its solid library of packages that always runs; that can easily integrate with lower level languages such as C, C++ or Fortran. <strong>R</strong> practically reads and writes any possible data format or database.</p>
+</div>
+<div id="ploting" class="section level2">
+<h2><span class="header-section-number">4.3</span> Ploting</h2>
+<p><strong>Plotting.</strong> The plotting capability is embedded in the base system itself. One of the major strengths is visualizing the data to make sense when there are millions and millions of numbers. No other language gets closer to that power. If you have tried C++, Python and Java you will have to end up searching for libraries and still will have to do a lot of leg work to get your plot right. Not in <strong>R</strong>. Besides the base plotting there are other powerful packages that even add a grammar of graphics such as ggplot2, which make R unique.</p>
+</div>
+<div id="packages" class="section level2">
+<h2><span class="header-section-number">4.4</span> Packages</h2>
+<p><strong>Packages.</strong> Publishing a package in <strong>R</strong>, sort of has become a badge of honor due to the stringent requisites and numerous rules you have to comply with to make your package available to its repository <strong>CRAN</strong>. And I think for a good reason, R has kept kept solidly growing and giving reliable results. And it is on the subject of <strong>reliability</strong> where the major separation between <strong>R</strong> and <strong>Python</strong> starts. If there is something that the Python community has to do to is improving the reliability of the code. Maybe by centralizing the package development under more rigorous standards. Today, there is not only two major Python versions out there competing, 2.7 and 3.5, but package compatibility varies from distributor to distributor. An application developed using Python vendor X will not run without hiccups or crashing in A or E or vice versa.</p>
+</div>
+<div id="foreign-languages" class="section level2">
+<h2><span class="header-section-number">4.5</span> Foreign languages</h2>
+<p><strong>Speaks C, C++ and Fortran.</strong> I think this is the one of the characteristics that caught more of my attention during my R exploration. If there is a challenge in engineering, it is to make the applications faster and more efficient. C++ and Fortran bring that besides the enormous baggage of scientific libraries; proven and tested. I tried it with calls from <strong>R</strong> to C, C++ and Fortran and they just work without touching your settings in the operating system. I tried in Windows, Linux and Mac OSX, and all of them compile without needing an IT guy or Admin on your side. R makes an amazing engineering tool. I even tested calling math libraries in Java.</p>
+</div>
+<div id="reproducible" class="section level2">
+<h2><span class="header-section-number">4.6</span> Reproducible</h2>
+<p><strong>Reproducible</strong>. This is a concept we may not have seen often in the <strong>petroleum</strong> industry. And that is possible due to our extreme reliance on spreadsheets. Everybody likes getting quick results. Don’t get me wrong. But the same characteristic of formulas and cells that made the worksheet the king, it is at the same time, its weakness. You cannot <strong>replicate</strong> safely the results unless you look at and revise <em>cell by cell</em>. You will never be sure that nothing has been improperly copied and pasted. And that’s a <strong>big problem</strong>. Spreadsheets nurtures <strong>bad data habits</strong>. I think it is here where the great influence of biomedicine, biogenetics, biogenomics and similar branches of the bio sciences play a vital role because they cannot afford any mistakes. The work of a researcher has to be able to be reproduced by colleagues or third parties before publication of the conclusions. The whole <strong>R</strong> environment has been molded in that way. The results should be the same -based on the same data-, regardless of who was the person running the analysis. Besides the benefit of repeating it in the future leaves lessons for others to learn.</p>
+<div class="figure">
+<img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAwVAAAAJDUwZmY0NjA5LTQwMGQtNDE1My04MTBkLTUxNzc1OWY2MmE4ZQ.jpg" />
 
+</div>
+</div>
+<div id="gui-not" class="section level2">
+<h2><span class="header-section-number">4.7</span> GUI not</h2>
+<p><strong>No need for GUI</strong>. It must be the data-centric nature of <strong>R</strong>, and its focus on the statistics, that doesn’t make you miss a graphical user interface. So, let’s say you are tremendously happy that you can produce your analysis, plots and report that you forget that you need a window with buttons, dialogs or menus. You are busy with the data, the calculations, the algorithms and the statistics without paying attention to the bells and whistles of a fancy user interface (UI). The folks from RStudio -one of the R vendors-, came up with a beautiful model for the graphical interface, browser based, and its name is <em>Shiny</em>. I heard about it. Got worried: here comes another HTML, JavaScript, CSS tool to learn. Nope! Wrong! They have made possible an abstraction of the whole graphical construction to just simple use of <strong>R</strong> code. I remember producing my first graphical statistical application, with sliders and all, in approximately 5 minutes. It’s easy even if you don’t know much R; like I was few months ago.</p>
+<div class="figure">
+<img src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAoQAAAAJDZjNjAzYWM3LTZhMjgtNDZlNS05YzE0LTgwMzc2NjFlOGYyOA.jpg" alt="img" />
+<p class="caption">img</p>
+</div>
+</div>
+<div id="where-is-everybody" class="section level2">
+<h2><span class="header-section-number">4.8</span> Where is everybody</h2>
+<p><strong>Why not everybody is using R then?</strong> R is hard. It looks different because it does things differently. I remember taking a look at my first book of R and thinking “rather do then my project in Python …” <strong>R</strong> exhibits a unique level of abstraction when it comes to the way of manipulating the data; it doesn’t resembles much of Python, or much less of Visual Basic. The best and most efficient operations are performed using vectors and it is heavily discouraged -but not forbidden- to use loops to perform iterations. Rather be using apply, lapply, sapply or the other apply functions. Getting out of the loop - no pun intended - possibly, is one of bad habits harder to break. It takes a while to get accustomed to the <strong>functional programming</strong> demands of coding in **R. But it is neater and one gets amazed that one line of code can do so much to summarize a huge data table and replace nested “for” loops.</p>
+</div>
+<div id="the-bottom-line" class="section level2">
+<h2><span class="header-section-number">4.9</span> The bottom line</h2>
+<p><strong>The bottom line.</strong> R, and the other scripting languages available, will always make your engineering and data science results better, state-of-art, reproducible, shareable, version-controlled, with publishing quality and with much, much better plots than the canned worksheet graphics, which by the way, haven’t changed much for the past 25 years.</p>
+<p>You can follow me via Twitter via <a href="https://twitter.com/OilGains">fonzie@OilGains</a></p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="dsp2e-the-well-network-dataset-part-3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="data-science-for-petroleum-production-engineering-part-1.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -210,7 +254,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/r_and_the_search.Rmd",
 "text": "Edit"
 },
 "download": ["data_science_ptech.pdf", "data_science_ptech.epub"],

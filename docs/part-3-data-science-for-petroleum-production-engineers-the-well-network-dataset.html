@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Science for Petroleum Production Engineers</title>
+  <meta name="description" content="This is the start of the book of a simple data science book.">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Science for Petroleum Production Engineers" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the start of the book of a simple data science book." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science for Petroleum Production Engineers" />
+  
+  <meta name="twitter:description" content="This is the start of the book of a simple data science book." />
+  
+
+<meta name="author" content="Alfonso R. Reyes">
+
+
+<meta name="date" content="2017-06-08">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="dsppe-acquiring-the-data.html">
+<link rel="next" href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">The Zero Draft Book </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="data-science-for-petroleum-production-engineering-part-i.html"><a href="data-science-for-petroleum-production-engineering-part-i.html"><i class="fa fa-check"></i><b>1</b> Data Science for Petroleum Production Engineering. Part I</a><ul>
+<li class="chapter" data-level="1.1" data-path="data-science-for-petroleum-production-engineering-part-i.html"><a href="data-science-for-petroleum-production-engineering-part-i.html#the-old-vs-the-new"><i class="fa fa-check"></i><b>1.1</b> The Old vs the New</a></li>
+<li class="chapter" data-level="1.2" data-path="data-science-for-petroleum-production-engineering-part-i.html"><a href="data-science-for-petroleum-production-engineering-part-i.html#why-does-it-take-so-long-to-build-optimization-models"><i class="fa fa-check"></i><b>1.2</b> Why does it take so long to build optimization models?</a></li>
+<li class="chapter" data-level="1.3" data-path="data-science-for-petroleum-production-engineering-part-i.html"><a href="data-science-for-petroleum-production-engineering-part-i.html#data-structures-are-our-friends"><i class="fa fa-check"></i><b>1.3</b> Data Structures are our friends</a></li>
+<li class="chapter" data-level="1.4" data-path="data-science-for-petroleum-production-engineering-part-i.html"><a href="data-science-for-petroleum-production-engineering-part-i.html#remember-garbage-in-garbage-out"><i class="fa fa-check"></i><b>1.4</b> Remember Garbage In, Garbage Out</a></li>
+<li class="chapter" data-level="1.5" data-path="data-science-for-petroleum-production-engineering-part-i.html"><a href="data-science-for-petroleum-production-engineering-part-i.html#the-python-notebooks-are-a-fit-for-production-engineers"><i class="fa fa-check"></i><b>1.5</b> The Python notebooks are a fit for production engineers</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="dsppe-acquiring-the-data.html"><a href="dsppe-acquiring-the-data.html"><i class="fa fa-check"></i><b>2</b> DSPPE - Acquiring the Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="dsppe-acquiring-the-data.html"><a href="dsppe-acquiring-the-data.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="dsppe-acquiring-the-data.html"><a href="dsppe-acquiring-the-data.html#multiwell-scanning"><i class="fa fa-check"></i><b>2.2</b> Multiwell Scanning</a></li>
+<li class="chapter" data-level="2.3" data-path="dsppe-acquiring-the-data.html"><a href="dsppe-acquiring-the-data.html#dataframes"><i class="fa fa-check"></i><b>2.3</b> Dataframes</a></li>
+<li class="chapter" data-level="2.4" data-path="dsppe-acquiring-the-data.html"><a href="dsppe-acquiring-the-data.html#the-excel-way"><i class="fa fa-check"></i><b>2.4</b> The Excel way :(</a></li>
+<li class="chapter" data-level="2.5" data-path="dsppe-acquiring-the-data.html"><a href="dsppe-acquiring-the-data.html#scripting-in-python"><i class="fa fa-check"></i><b>2.5</b> Scripting in Python</a></li>
+<li class="chapter" data-level="2.6" data-path="dsppe-acquiring-the-data.html"><a href="dsppe-acquiring-the-data.html#plotting"><i class="fa fa-check"></i><b>2.6</b> Plotting</a></li>
+<li class="chapter" data-level="2.7" data-path="dsppe-acquiring-the-data.html"><a href="dsppe-acquiring-the-data.html#what-are-we-learning-so-far"><i class="fa fa-check"></i><b>2.7</b> What are we learning so far?</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html"><a href="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html"><i class="fa fa-check"></i><b>3</b> Part 3: Data Science For Petroleum Production Engineers - The Well Network Dataset</a><ul>
+<li class="chapter" data-level="3.1" data-path="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html"><a href="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html#introduction-1"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html"><a href="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html#the-network-model"><i class="fa fa-check"></i><b>3.2</b> The Network Model</a></li>
+<li class="chapter" data-level="3.3" data-path="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html"><a href="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html#the-network-model-dataset"><i class="fa fa-check"></i><b>3.3</b> The network model dataset</a></li>
+<li class="chapter" data-level="3.4" data-path="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html"><a href="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html#gathering-auxiliary-data"><i class="fa fa-check"></i><b>3.4</b> Gathering auxiliary data</a></li>
+<li class="chapter" data-level="3.5" data-path="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html"><a href="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html#the-field-view"><i class="fa fa-check"></i><b>3.5</b> The field view</a></li>
+<li class="chapter" data-level="3.6" data-path="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html"><a href="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html#the-kpis-dataset-for-gas-lift"><i class="fa fa-check"></i><b>3.6</b> The KPIs dataset for Gas Lift</a></li>
+<li class="chapter" data-level="3.7" data-path="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html"><a href="part-3-data-science-for-petroleum-production-engineers-the-well-network-dataset.html#conclusions"><i class="fa fa-check"></i><b>3.7</b> Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><i class="fa fa-check"></i><b>4</b> “R” and the search of the ideal language for petroleum engineering</a><ul>
+<li class="chapter" data-level="4.1" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#the-fun-of-the-21st-century"><i class="fa fa-check"></i><b>4.1</b> The fun of the 21st century</a></li>
+<li class="chapter" data-level="4.2" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#what-is-r"><i class="fa fa-check"></i><b>4.2</b> What is R?</a></li>
+<li class="chapter" data-level="4.3" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#ploting"><i class="fa fa-check"></i><b>4.3</b> Ploting</a></li>
+<li class="chapter" data-level="4.4" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#packages"><i class="fa fa-check"></i><b>4.4</b> Packages</a></li>
+<li class="chapter" data-level="4.5" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#foreign-languages"><i class="fa fa-check"></i><b>4.5</b> Foreign languages</a></li>
+<li class="chapter" data-level="4.6" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#reproducible"><i class="fa fa-check"></i><b>4.6</b> Reproducible</a></li>
+<li class="chapter" data-level="4.7" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#gui-not"><i class="fa fa-check"></i><b>4.7</b> GUI not</a></li>
+<li class="chapter" data-level="4.8" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#where-is-everybody"><i class="fa fa-check"></i><b>4.8</b> Where is everybody</a></li>
+<li class="chapter" data-level="4.9" data-path="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html"><a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html#the-bottom-line"><i class="fa fa-check"></i><b>4.9</b> The bottom line</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science for Petroleum Production Engineers</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="part-3-data-science-for-petroleum-production-engineers---the-well-network-dataset" class="section level1">
+<h1><span class="header-section-number">3</span> Part 3: Data Science For Petroleum Production Engineers - The Well Network Dataset</h1>
+<hr />
+<p>Table of Contents IntroductionThe Network ModelThe need of automation for well network modelingThe network model datasetReading the model variables with automationGathering auxiliary dataThe field viewThe KPIs dataset for Gas LiftOther datasetsBasic statisticsAdvanced statisticsConclusions</p>
+<div id="introduction-1" class="section level2">
+<h2><span class="header-section-number">3.1</span> Introduction</h2>
+<p>In our last post (Part 2) we reviewed the multiwell dataset generated by scanning multiple well models built with the software Prosper. This time we will analyze a network model built with GAP - the well network analysis tool from Petroleum Experts -, using well models that have been previously calibrated and matched.</p>
+<ul>
+<li>[ ] share the multiwell dataset in Github</li>
+<li>[ ] create an email and user name for Oil Gains account in Github<br />
+</li>
+<li>[ ] Or later, we promise to provide the links?</li>
+</ul>
+<p>Typically, these network models are analyzed by viewing the results graphically and in the built-in solver table or exporting the text data to continue the comparative analysis with any office application. This represents a little of an inconvenience because: (1) the results cannot be compared to other scenarios unless you take manual notes; (2) no graphical analysis can be directly performed because the application lacks plotting capabilities for the solver output; (3) the data that we need exported is not structured or tidy, -meaning, lacks columnar format or something resembling tables or data frames. This requires time of the engineer for parsing and format the solution table from GAP to be understood by Excel or other analysis application; (4) lastly, the solutions are not saved in a historical file for future reference; the solutions from the solver are lost on time.</p>
+<p>In some way we have to deal with it. We cannot expect from sophisticated state-of-the-art calculation engines to be full of features to satisfy the data scientist in our production engineering department. We understand we are in a transition to an era of big data. We will get there soon. We expect that petroleum engineering software will catch up with the times. In the meantime, we can handle our data analysis with Python, R or other data science visualization tools available.</p>
+<p>The objective of this article is sharing an experience on applying data science to the results coming out of network modeling work on a set of oil wells. These oil wells are combination of flowing and gas lift wells; mostly gas lift wells. We are looking to optimize the production schema of the system by finding the right tubing head pressure, gas lift injection rate, gas lift injection pressure, choke size, separator pressure and others.</p>
+</div>
+<div id="the-network-model" class="section level2">
+<h2><span class="header-section-number">3.2</span> The Network Model</h2>
+<p>The need of automation for well network modeling</p>
+<p>As we mentioned above, the export format of the calculation results of network modeling for well optimization is non-structured text but still it can be printed or pasted directly to Excel for parsing to separate the data in columns (variables) and rows (observations). In some way, this is time consuming and a potential source of errors. Worse if several iterations have to be performed on the well and network input data for the generation of optimization scenarios. Certainly, this process is screaming to be automated. But that takes time and resources.</p>
+<p>This is what this is about: generating a repeatable and automated script to read the network model from the original source or calculation engine: GAP. GAP is a comprehensive application from Petroleum Experts to resolve well networks. It is unique in the sense that counts with a very powerful interface for data interchange with other applications; it is called OpenServer.</p>
+<p>With OpenServer it is possible to read and write variables from and to the network model. Also allows the production engineer to customize production optimization scenarios in the most complex fashion making possible an automated process by means of iterative input to find a solution that better adapts to the conditions of our field. In this article we dedicate our attention to the GAP Solver that looks like Figure 1. It corresponds to a generic example.</p>
+<p>￼]</p>
+<p>Figure 1 - GAP solver panel from one of the examples.</p>
+</div>
+<div id="the-network-model-dataset" class="section level2">
+<h2><span class="header-section-number">3.3</span> The network model dataset</h2>
+<p>The well network dataset is formed essentially by the columns in the solver. In the figure above you see on the first column various items that are part of the network such as flowlines, separators, joints, etc., but we are looking for is only the wells. Of course, you can analyze other network components but that could be a topic of a different article. Each of the columns in the table can be extracted, as we explained above, by copy-pasting to Excel, or by using OpenServer. We read each of the columns (the ones that we are most interested in) and create a dataset. We will explain later how this reading process works (involves Python and OpenServer).</p>
+<ul>
+<li>[ ] show obfuscated datase/table/dataframe</li>
+</ul>
+<p>The rows in the dataset correspond to the wells and the columns to the variables that were extracted from the columns in the solver.</p>
+<p>Instinctively, we may tempted to say, after seeing the solver table, that the dataset should be just the calculated columns in that table. But that would be an incomplete dataset. Besides of the solution for the scenario proposed, we require additional data for the network of wells under analysis.</p>
+<ul>
+<li>[ ] what is the additional data?</li>
+</ul>
+<p>Reading the model variables with automation</p>
+<p>Reading the GAP model requires a connection to OpenServer through a COM server. There are few examples under the OpenServer folder in the IPM examples installation folder that uses Excel VBA. For simple examples, Excel is fine. For serious programming and more complex tasks it is recommended to use Python or other high level language.</p>
+<p>We show below a pseudo-code explaining the steps for reading GAP variables. Writing to GAP is similar.</p>
+<ul>
+<li>[ ] explain the GAP variable</li>
+<li>[ ] show few examples of the variables: GAP.well[0].bla-bla-bla</li>
+<li><p>[ ] show a basic code to read the variables to a dataframe. Pseudo-code</p>
+<h1 id="pseudo-code-for-gap-automation-script-with-python"><span class="header-section-number">3.3</span> pseudo-code for GAP automation script with Python</h1>
+<p>from ptech import *</p>
+<p>connect_to_openserver() start_gap()</p>
+<p>select_network_model() open_network_model()</p>
+<p>wells = NetworkModel(wells)</p>
+<p>data = list() for well in wells: data.append(read_variables(well))</p>
+<p>create_dataframe(data) shutdown_gap() close_openserver()</p></li>
+</ul>
+</div>
+<div id="gathering-auxiliary-data" class="section level2">
+<h2><span class="header-section-number">3.4</span> Gathering auxiliary data</h2>
+<p>Collecting the data for the network model is not a major problem; most of the data is coming from the well models that we saw in Part 2. At this stage, the well models have been matched to their IPR (inflow performance relationship), VLP**(vertical lift performance) and calibrated against their latest well test and FGS (flowing gradient surveys).</p>
+<p>Additional data for the network model such as constraints, wells on-line, choke orifice size, flowline dimensions, separator pressures, total field production are entered directly in the model in GAP.</p>
+<p>what else?</p>
+</div>
+<div id="the-field-view" class="section level2">
+<h2><span class="header-section-number">3.5</span> The field view</h2>
+<p>During the construction of the network model, conditions change: wells that are on-line, wells shut-in, compressors down, flowlines opened or close or bypassed, changes in the chokes, back-pressure, etc. When we run the network optimization we are looking for a way to visualize in one plot the current status as is in the model file in GAP. This saves considerable time in navigating through screens and checking the well condition one by one.</p>
+<p>What we see in Figure 2 is a customized plot that was written using matplotlib, a Python plotting library. The variables shown are the minimal that could be shown as critical for the verification of the model.</p>
+<p>Figure 2 - The well network summary plot.</p>
+<p>Each of the rectangles represent a platform. The wells in green are the ones active or producing. The well with suffix NF, GP and GL mean that that well is a natural flow well or it is a gas producer or it is a gas lift well. At the bottom of the rectangles we see the total number of strings (or wells). The letter “E” below means the number of wells that are enabled in the model, while “D” indicates how many wells were disabled in the network model.</p>
+<ul>
+<li>[ ] change the plot above to something neutral</li>
+</ul>
+</div>
+<div id="the-kpis-dataset-for-gas-lift" class="section level2">
+<h2><span class="header-section-number">3.6</span> The KPIs dataset for Gas Lift</h2>
+<p>Since most of the wells in the dataset were producing with gas lift, In order to find relationships between the different gas lift parameters we build an additional dataset based on common gas lift formulas in Figure 3 to evaluate the gas lift performance of the field. The new dataset uses as a base for the calculations the columns available in the solver dataset.</p>
+<p>￼</p>
+<p>Figure 3: Key Performance Indicators (KPIs) for gas lift</p>
+<p>The reason for doing this is to observe the gas lift indicators under the light of the solutions recommended by the network optimizer. We try to find out if there is a better scenario that just maximizing the oil production, such as reallocating gas or give preference to wells with a lower watercut.</p>
+<p>This is how the gas lift KPIs dataset looks after applying the formulas.</p>
+<p>￼</p>
+<p>Figure 4 - a dataset generated from the solver solution.</p>
+<ul>
+<li>[ ] obfuscate data.</li>
+</ul>
+<p>Note that we have kept the well name as a column to identify the row or observation.</p>
+<p>Other datasets</p>
+<ul>
+<li>[ ] mention what are the other datasets that will be published</li>
+</ul>
+<p>Basic statistics</p>
+<p>￼</p>
+<p>￼</p>
+<p>Advanced statistics</p>
+<p>￼</p>
+<p>￼</p>
+</div>
+<div id="conclusions" class="section level2">
+<h2><span class="header-section-number">3.7</span> Conclusions</h2>
+<ul>
+<li>There is always a way to get an engineering solution to be statistically analyzed.</li>
+<li>Use plots to visualize a summary of the data.</li>
+<li>Don’t be timid at generating additional datasets from the solution data.</li>
+<li>Look at what the plots tell you. They always will try to convey something.</li>
+<li>You are not wrong if you underestimate Excel as a potting tool. Look outside for better plotting tools but manage first how to get the data out.</li>
+<li>There is more gains to be made by analyzing your solution outside your favorite engineering software. There is no such thing as a software that does everything for everyone“.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="dsppe-acquiring-the-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/p3_ds_for_ppe.Rmd",
+"text": "Edit"
+},
+"download": ["data_science_ptech.pdf", "data_science_ptech.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
