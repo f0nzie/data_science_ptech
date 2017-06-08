@@ -1,4 +1,4 @@
-# Part 3: Data Science For Petroleum Production Engineers - The Well Network Dataset
+# $DSP^2E$ - The Well Network Dataset (part 3)
 
 ---
 
