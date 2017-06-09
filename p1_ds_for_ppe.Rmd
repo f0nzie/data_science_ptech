@@ -7,14 +7,26 @@ knitr::include_graphics(rep("images/p1_cover.jpg", 1))
 
 
 ## The Old vs the New
-In the last century, the production engineer built the well models one by one and analyzed the results also one by one. With the ubiquity of the personal computer, desktops and laptops, an unimaginable computational power has been put in our hands. But we need the right tools!
+In the last century, the production engineer built the well models one by one and analyzed the results also one by one. With the ubiquity of the personal computer, desktops and laptops, an unimaginable computational power has been put in our hands. So, why takes so long to update well models? Why still are we doing it one-by-one? 
 
-Why -if we communicate data at gigabits per second-, are we still using a tool of the era of bits per second?
+Why -if nowadays we transfer data at gigabits per second-, are we still using tools of the era of bits per second?
 
+## Do Worksheets, spreadsheets makes you dumb?
+The spreadsheet was invented in the 80’s and was a great invention. The beauty
+of it is that you can produce results right away. 
 
-The spreadsheet was invented in the 80’s and was a great invention. The beauty of it is that you can produce results right away. We are very thankful to Lotus 1-2-3 and Microsoft Excel for that. But let us remember that it was the 80’s –there was not internet, no tablets, data moved at 2400 bps, and real-time data acquisition was constrained to a handful of fields. Today, well data comes in gigabytes per minute and we know it is not humanly possible to tackle all the information to put it at good use.
+We are very thankful to Lotus 1-2-3 and Microsoft Excel for that. 
+
+But let us remember that it was the 80’s –there was not internet, no tablets, no
+smartphones, no laptops. Data moved at 2400 bps, and real-time data acquisition
+was constrained to a handful of fields with luxury mainframes. Today, well data
+comes in gigabytes per minute and we know it is not humanly possible to tackle
+all the information to put it at good use.
 
 The answer of this century is to that is start using automation, artificial intelligence, statistics, machine learning but first of all, data science. These are the keywords of the future. The future of the petroleum engineer.
+
+The thing is: there are not smart well or smart fields, w
+              without smart tools and smart people 
 
 ## Why does it take so long to build optimization models?
 
