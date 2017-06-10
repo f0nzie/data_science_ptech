@@ -14,7 +14,15 @@ In the past session we got an introduction to the multiwell statistics package s
 
 ## Multiwell Scanning
 
-The multiwell scanning is the process by which we use a Python script to automatically open all the well models in the background, pulling the user-defined parameters and create an output file where the rows are the wells and the well parameters are the columns. The scanning open the optimization software, which could be Petex Prosper, AppSmiths WinGLUE or any other that has a way to share its variables outside the application. In the case of Petronas, we adopted as a standard both. In this example I will use use Prosper. This is how a file with the input variables look like:
+The multiwell scanning is the process by which we use a Python script to
+automatically open all the well models in the background, pulling the
+user-defined parameters and create an output file where the rows are the wells
+and the well parameters are the columns. In data science parlance, the rows are called `observations` and the columns are the `variables`.
+
+The scanning open the optimization software, which could be Petex's Prosper,
+AppSmiths' WinGLUE or any other application that has a way to share its variables and control to the outside. In the case of Petronas, we adopted as a standard both. In this
+example I will use use Prosper. This is how a file with the input variables look
+like:
 
 ![](./images/table.jpg)
 
