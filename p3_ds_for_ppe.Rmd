@@ -27,14 +27,23 @@ The objective of this article is sharing an experience on applying data science 
 
 ## The Network Model
 
-As we mentioned above, the export format of the calculation results of network modeling for well optimization is **non-structured** text but still it can be printed or pasted directly to Excel for parsing to separate the data in columns (**variables**) and rows (**observations**). In some way, this is time consuming and a potential source of errors. Worse if several iterations have to be performed on the well and network input data for the generation of **optimization** **scenarios**. Certainly, this process is screaming to be automated. But that takes time and resources.
+As we mentioned above, the export format of the calculation results of network modeling for well optimization is **non-structured** text but still it can be printed or pasted directly to Excel for parsing to separate the data in columns (**variables**) and rows (**observations**). In some way, this is time consuming and a potential source of errors. Worse if several iterations have to be performed on the well and network input data for the generation of **optimization scenarios**. Certainly, this process is screaming to be automated. But that takes time and resources.
 
 
 ## The need of automation for well network modeling
 
-This is what this is about: generating a repeatable and automated script to read the network model from the original source or calculation engine: GAP. GAP is a comprehensive application from Petroleum Experts to resolve well networks. It is unique in the sense that counts with a very powerful interface for data interchange with other applications; it is called **OpenServer**.
+This is what this is about: generating a repeatable and automated script to read
+the network model from the original source or calculation engine: GAP. GAP is a
+comprehensive application from Petroleum Experts to resolve well networks. It is
+unique in the sense that counts with a very powerful interface for data
+interchange and control with other applications; it is called **OpenServer**.
 
-With OpenServer it is possible to read and write variables from and to the network model. Also allows the production engineer to customize production **optimization scenarios** in the most complex fashion making possible an automated process by means of iterative input to find a solution that better adapts to the conditions of our field. In this article we dedicate our attention to the GAP Solver that looks like Figure 1. It corresponds to a generic example.
+With `OpenServer` it is possible to read and write variables from and to the
+network model. Also allows the production engineer to customize production
+**optimization scenarios** in the most complex fashion making possible an
+automated process by means of iterative input to find a solution that better
+adapts to the conditions of our field. In this article we dedicate our attention
+to the GAP Solver that looks like in the figure. It corresponds to a generic example.
 
 
 
@@ -58,35 +67,37 @@ Instinctively, we may tempted to say, after seeing the solver table, that the da
 
 ## Reading the model variables with automation
 
-Reading the GAP model requires a connection to OpenServer through a COM server. There are few examples under the OpenServer folder in the IPM examples installation folder that uses Excel VBA. For simple examples, Excel is fine. For serious programming and more complex tasks it is recommended to use Python or other high level language.
+Reading the GAP model requires a connection to `OpenServer` through a COM server/client connection. In our example, GAP is the server. There are few examples under the `OpenServer` folder in the IPM examples installation folder that uses Excel VBA. For simple examples, Excel is fine. For serious programming and more complex tasks it is recommended to use Python or other high level language.
 
 We show below a pseudo-code explaining the steps for reading GAP variables. Writing to GAP is similar.
 
+TODO
 - [ ] `explain the GAP variable`
 - [ ] `show few examples of the variables: GAP.well[0].bla-bla-bla`
 - [ ] `show a basic code to read the variables to a dataframe. Pseudo-code`
+- [ ] ` link to the code`
 
 
 
 ```python
-# pseudo-code for GAP automation script with Python
-from ptech import *
-
-connect_to_openserver()
-start_gap()
-
-select_network_model()
-open_network_model()
-
-wells = NetworkModel(wells)
-
-data = list()
-for well in wells:
-    data.append(read_variables(well))
+    # pseudo-code for GAP automation script with Python
+    from ptech import *
     
-create_dataframe(data)
-shutdown_gap()
-close_openserver()
+    connect_to_openserver()
+    start_gap()
+    
+    select_network_model()
+    open_network_model()
+    
+    wells = NetworkModel(wells)
+    
+    data = list()
+    for well in wells:
+        data.append(read_variables(well))
+        
+    create_dataframe(data)
+    shutdown_gap()
+    close_openserver()
 ```
 
 
@@ -95,17 +106,18 @@ close_openserver()
 
 ## Gathering auxiliary data
 
-Collecting the data for the network model is not a major problem; most of the data is coming from the well models that we saw in Part 2. At this stage, the well models have been matched to their **IPR** (inflow performance relationship), VLP**(vertical lift performance) and calibrated against their latest well test and FGS (flowing gradient surveys).
+Collecting the data for the network model is not a major problem; most of the data is coming from the well models that we saw in Part 2 (`add link`). At this stage, the well models have been matched to their **IPR** (inflow performance relationship), VLP**(vertical lift performance), and calibrated against their latest well test and FGS (flowing gradient surveys).
 
 Additional data for the network model such as constraints, wells on-line, choke orifice size, flowline dimensions, separator pressures, total field production are entered directly in the model in GAP.
 
+TODO
 `what else?`
 
 
 
 ## The field view
 
-During the construction of the network model, conditions change: wells that are on-line, wells shut-in, compressors down, flowlines opened or close or bypassed, changes in the chokes, back-pressure, etc. When we run the network optimization we are looking for a way to visualize in one plot the current status as is in the model file in GAP. This saves considerable time in navigating through screens and checking the well condition one by one.
+During the construction of the network model, conditions change: wells that are on-line, wells that are shut-in, compressors down, flowlines opened or close or bypassed, changes in the chokes, back-pressure, etc. When we run the network optimization we are looking for a way to visualize in one plot the current status as is in the model file in GAP. This saves considerable time in navigating through screens and checking the well condition one by one.
 
 What we see in *Figure 2* is a customized plot that was written using matplotlib, a Python plotting library. The variables shown are the minimal that could be shown as critical for the verification of the model. 
 
@@ -116,6 +128,7 @@ What we see in *Figure 2* is a customized plot that was written using matplotlib
 Each of the rectangles represent a platform. The wells in green are the ones active or producing. The well with suffix NF, GP and GL mean that that well is a natural flow well or it is a gas producer or it is a gas lift well. At the bottom of the rectangles we see the total number of strings (or wells). The letter “E” below means the number of wells that are enabled in the model, while “D” indicates how many wells were disabled in the network model.
 
 - [ ] change the plot above to something neutral
+
 
 ## The KPIs dataset for Gas Lift
 
@@ -135,6 +148,7 @@ This is how the gas lift KPIs dataset looks after applying the formulas.
 
 Figure 4 - a dataset generated from the solver solution.
 
+TODO
 - [ ] obfuscate data.
 
 Note that we have kept the well name as a column to identify the row or observation.
@@ -149,7 +163,6 @@ Note that we have kept the well name as a column to identify the row or observat
 
 ## Basic statistics
 
-￼ 
 
 ![](./images/how_many_strings.png)
 
@@ -161,7 +174,8 @@ Note that we have kept the well name as a column to identify the row or observat
 
 ## Advanced statistics
 
-
+TODO
+* round the tables
 
 ![](./images/maximum_guf.png)
 
@@ -177,14 +191,12 @@ Note that we have kept the well name as a column to identify the row or observat
 
 ## Conclusions
 
-
-
-- There is always a way to get an engineering solution to be statistically analyzed.
-- Use plots to visualize a summary of the data.
-- Don't be timid at generating additional datasets from the solution data.
-- Look at what the plots tell you. They always will try to convey something.
-- You are not wrong if you underestimate Excel as a potting tool. Look outside for better plotting tools but manage first how to get the data out.
-- There is more gains to be made by analyzing your solution outside your favorite engineering software. There is no such thing as a software that does everything for everyone".
+* There is always a way to get an engineering solution to be statistically analyzed.
+* Use plots to visualize a summary of the data.
+* Don't be timid at generating additional datasets from the solution data.
+* Look at what the plots tell you. They always will try to convey something.
+* You are not wrong if you underestimate Excel as a potting tool. Look outside for better plotting tools but manage first how to get the data out.
+* There is more gains to be made by analyzing your solution outside your favorite engineering software. There is no such thing as a software that does everything for everyone".
 
 
 
