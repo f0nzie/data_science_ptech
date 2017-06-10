@@ -6,30 +6,70 @@ knitr::include_graphics(rep("images/logo_p2.jpg", 1))
 ```
 
 
-## Introduction
+## An engineering library
 
-In the past session we got an introduction to the multiwell statistics package showing a few of the things that we can do with the Petronas PTech Engineering Library. Now, we will explore some more functionality. It is incredible the huge amount of information when we get from all the wells in one scan pass. The data starts to have sense. A well in isolation or standalone doesn’t tell used much about the field or differences between well parameters from well to well. This is where the power of the multiwell scanning resides. 
+In the past session we got an introduction to the multiwell statistics package showing a few of the things that we can do with an engineering library implemented with Python. Now, we will explore some more functionality. It is incredible the huge amount of information when we get from all the wells in one scan pass. The well data starts to have sense. A well in isolation or standalone doesn’t tell used much about the field or differences between well parameters from well to well. This is where the power of the multiwell scanning scrip resides. 
 
 
 
 ## Multiwell Scanning
 
-The multiwell scanning is the process by which we use a Python script to automatically open all the well models in the background, pulling the user-defined parameters and create an output file where the rows are the wells and the well parameters are the columns. The scanning open the optimization software, which could be Petex Prosper, AppSmiths WinGLUE or any other that has a way to share its variables outside the application. In the case of Petronas, we adopted as a standard both. In this example I will use use Prosper. This is how a file with the input variables look like:
+The multiwell scanning is the process by which we use a Python script to
+automatically open all the well models in the background, pulling the
+user-defined parameters and create an output file where the rows are the wells
+and the well parameters are the columns. In data science parlance, the rows are called `observations` and the columns are the `variables`.
+
+The scanning open the optimization software, which could be Petex's Prosper, 
+AppSmiths' WinGLUE or any other application that has a way to share its
+variables and control to the outside. In the case of Petronas, we adopted as a
+standard both. In this example I will use use Prosper. This is how a file with
+the input variables look like:
 
 ![](./images/table.jpg)
 
-These are few of the variables that we want to pull from each of the well models to be scanned. Note that the first 7 columns belong to the decomposition of the Petex OpenServer variables. I created this input file to make possible a repeatable selection process. In one of the datasets we will see 94 variable-columns; in other maybe less than 40. You can also have a set of input workbooks; one for PVT analysis, another for well test, or gas lift, or IPR or VLP selection. In another post I will enter in detail about this input worksheet.
+These are few of the variables that we want to pull from each of the well models
+to be scanned. Note that the first 7 columns belong to the decomposition of the
+Petex OpenServer variables. I created this input file to make possible a
+repeatable selection process. In one of the datasets we will see 94
+variable-columns; in other maybe less than 40. You can also have a set of input
+workbooks; one for PVT analysis, another for well test, or gas lift, or IPR or
+VLP selection. In another post I will enter in detail about this input
+worksheet.
 
-## Dataframes
+The interesting thing to note here is that we can select what well variables we
+will be extracted from each of the well models and written to the dataset. You
+can do this to 10 well, 50 wells, 100 or 1000 wells. You can gain great insights
+from from comparing all the well models at once. Soon it will become evident
+which is one the IPR correlation most used in the company, what PVT correlations
+give a better matching or which VLP adjust better to the well or field.
 
-After the script finishes gathering data from the last well you will end up with an output file. The tabular form of the data in that output file is what is called in Python pandas a dataframe. The table looks like this:
+
+## Data frames and data tables
+
+After the script finishes gathering data from the last well you will end up with an output file. The tabular form of the data in that output file is what is called a data frame or a data table. The table in our example will like this:
 
 ![](./images/multiwells.jpg)
 
 
 ## The Excel way :(
 
-Yes, it is Excel. But we just use it as a legacy so any production technologist can see the output without much complication. Some have questioned why we do all this data processing with Python instead of using Excel. The question is very simple, and I think you will quickly understand if you have ever worked with datasets in Excel. I will just cite few of the inconveniences: (1) the macros VBA are alright if you are writing less than a hundred of lines of code; (2) the code in VBA is difficult to maintain and there is no version control like with git or other; (3) Microsoft VBA has its own way of doing things and you have to learn a lot about the internals of the MS libraries if you want to do little above of the ordinary calculations and plotting; (4) VBA code is difficult to share with colleagues and when you make a change or update the code you have to send again the big workbook, in other words there is no updating process embedded within Excel and VBA. Don't get me wrong. I have done terrific things with Excel VBA but it is painful by the lack of an engineering or scientific community behind as is the case with Python. Let's say that Excel is good at table visualization and anybody can open and understand it.
+Yes, it is Excel. But we just use it as a legacy tool so we can share the results with any production technologist without much complication. 
+
+Some have questioned why we do all this data processing with Python instead of using Excel. The question is very simple, and I think you will quickly understand if you have ever worked with datasets in Excel. I will just cite few of the inconveniences: 
+
+(1) the macros VBA are alright if you are writing less than a hundred of lines of code; 
+
+(2) the code in VBA is difficult to maintain and there is no version control like with Git or similar. Version control is essential in dealing with data analysis.
+
+(3) Microsoft VBA has its own way of doing things and you have to learn a lot about the internals of the MS libraries if you want to do little above of the ordinary calculations and plotting; 
+
+(4) VBA code is difficult to share with colleagues and when you make a change or update the code you have to send again a big workbook, in other words there is no updating process embedded within Excel and VBA to load new code. 
+
+(5) Reproducibility
+
+(6) Antiquated plotting
+
+Don't get me wrong. I have done terrific things with Excel VBA but it is painful by the lack of an engineering or scientific community behind as is the case with Python or R. Let's say that Excel is good at table visualization that anybody can open, understand it and do some basic plotting around it.
 
 But as you get immersed with Python and pandas you will see that using Excel as data containers is purely optional; there are other powerful data structures available out there.
 
@@ -40,9 +80,11 @@ The Python script that open the well models and pulls the data is this:
 
 ![](./images/script-open-model.jpg)
 
-Each of the lines in the script is explained through a comment above. But let’s briefly explain what this script does. What we are trying to achieve is reading all the Prosper well models located under the folder PISC. You are interested in reading some variables from these models and putting them in a table-like structure for statistical analysis later. These variables have been defined in the input workbook –explained above. 
+Each of the lines in the script is explained through a comment above. The comments come always after the pound `#` sign. 
 
-Loading the dataset
+Let’s briefly explain what this script does. What we are trying to achieve is reading all the Prosper well models located under the folder PISC. You are interested in reading some variables from these models and putting them in a table-like structure for statistical analysis later. These variables have been defined in the input workbook –explained above. 
+
+## Loading the dataset
 
 Now, you have generated yourself a dataset. This dataset contains the data of 100 wells that was just generated by the application multiwell scanner. Let's load the dataset with this script:
 
@@ -74,10 +116,14 @@ And for the PVT correlations:
 
 ## What are we learning so far?
 
-At this moment you may be wondering: well modeling is hard; it takes a lot of work. So many variables to take care of. Yes, it is. That’s why getting a network model ready for scenarios and simulation takes so long. 
+At this moment you may be wondering: kind of well modeling is hard; it takes a lot of work. So many variables to take care of. Yes, it is. That’s why getting a network model ready for scenarios and simulation takes so long. Now, imagine if you have to do this analysis by hand, or using the mouse and clicks.
 
-The advantage here, with the Python PTech Library, is that we are acting on multiple wells; not just one. There is a significant reduction in time and improvement in the quality of the data by tackling the problem in this way. But requires a toolbox: the toolbox of the data scientist. You are now using the bleeding edge of the digital tools available to the brightest minds in the world to find more oil; faster and efficiently.
+The advantage here, with the Python scripting library, is that we are acting on multiple wells; not just one. There is a significant reduction in time and improvement in the quality of the data by tackling the problem in this way. But requires a toolbox: the toolbox of the data scientist. You are now using the bleeding edge of the digital tools available to the brightest minds in the world to find more oil; faster and efficiently.
 
 ![](./images/ipr_corrs.jpg)
 
+TODO
+* add conclusions
+* maybe more plots
+* add code and links to code
 
