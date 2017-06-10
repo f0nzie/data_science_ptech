@@ -46,7 +46,7 @@ give a better matching or which VLP adjust better to the well or field.
 
 ## Data frames and data tables
 
-After the script finishes gathering data from the last well you will end up with an output file. The tabular form of the data in that output file is what is called in Python pandas a dataframe. The table looks like this:
+After the script finishes gathering data from the last well you will end up with an output file. The tabular form of the data in that output file is what is called a data frame or a data table. The table in our example will like this:
 
 ![](./images/multiwells.jpg)
 
