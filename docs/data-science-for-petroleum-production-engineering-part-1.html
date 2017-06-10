@@ -105,10 +105,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="chapter" data-level="1" data-path="data-science-for-petroleum-production-engineering-part-1.html"><a href="data-science-for-petroleum-production-engineering-part-1.html"><i class="fa fa-check"></i><b>1</b> Data Science for Petroleum Production Engineering (part 1)</a><ul>
 <li class="chapter" data-level="1.1" data-path="data-science-for-petroleum-production-engineering-part-1.html"><a href="data-science-for-petroleum-production-engineering-part-1.html#the-old-vs-the-new"><i class="fa fa-check"></i><b>1.1</b> The Old vs the New</a></li>
-<li class="chapter" data-level="1.2" data-path="data-science-for-petroleum-production-engineering-part-1.html"><a href="data-science-for-petroleum-production-engineering-part-1.html#why-does-it-take-so-long-to-build-optimization-models"><i class="fa fa-check"></i><b>1.2</b> Why does it take so long to build optimization models?</a></li>
-<li class="chapter" data-level="1.3" data-path="data-science-for-petroleum-production-engineering-part-1.html"><a href="data-science-for-petroleum-production-engineering-part-1.html#data-structures-are-our-friends"><i class="fa fa-check"></i><b>1.3</b> Data Structures are our friends</a></li>
-<li class="chapter" data-level="1.4" data-path="data-science-for-petroleum-production-engineering-part-1.html"><a href="data-science-for-petroleum-production-engineering-part-1.html#remember-garbage-in-garbage-out"><i class="fa fa-check"></i><b>1.4</b> Remember Garbage In, Garbage Out</a></li>
-<li class="chapter" data-level="1.5" data-path="data-science-for-petroleum-production-engineering-part-1.html"><a href="data-science-for-petroleum-production-engineering-part-1.html#the-python-notebooks-are-a-fit-for-production-engineers"><i class="fa fa-check"></i><b>1.5</b> The Python notebooks are a fit for production engineers</a></li>
+<li class="chapter" data-level="1.2" data-path="data-science-for-petroleum-production-engineering-part-1.html"><a href="data-science-for-petroleum-production-engineering-part-1.html#do-worksheets-spreadsheets-makes-you-dumb"><i class="fa fa-check"></i><b>1.2</b> Do worksheets, spreadsheets makes you dumb?</a></li>
+<li class="chapter" data-level="1.3" data-path="data-science-for-petroleum-production-engineering-part-1.html"><a href="data-science-for-petroleum-production-engineering-part-1.html#why-does-it-take-so-long-to-build-optimization-models"><i class="fa fa-check"></i><b>1.3</b> Why does it take so long to build optimization models?</a></li>
+<li class="chapter" data-level="1.4" data-path="data-science-for-petroleum-production-engineering-part-1.html"><a href="data-science-for-petroleum-production-engineering-part-1.html#the-cheapest-oil-you-can-find"><i class="fa fa-check"></i><b>1.4</b> The cheapest oil you can find?</a></li>
+<li class="chapter" data-level="1.5" data-path="data-science-for-petroleum-production-engineering-part-1.html"><a href="data-science-for-petroleum-production-engineering-part-1.html#data-structures-are-our-friends"><i class="fa fa-check"></i><b>1.5</b> Data structures are our friends</a></li>
+<li class="chapter" data-level="1.6" data-path="data-science-for-petroleum-production-engineering-part-1.html"><a href="data-science-for-petroleum-production-engineering-part-1.html#remember-garbage-in-garbage-out"><i class="fa fa-check"></i><b>1.6</b> Remember: Garbage In, Garbage Out</a></li>
+<li class="chapter" data-level="1.7" data-path="data-science-for-petroleum-production-engineering-part-1.html"><a href="data-science-for-petroleum-production-engineering-part-1.html#digital-notebooks-are-a-fit-for-engineers"><i class="fa fa-check"></i><b>1.7</b> Digital Notebooks are a fit for Engineers</a></li>
+<li class="chapter" data-level="1.8" data-path="data-science-for-petroleum-production-engineering-part-1.html"><a href="data-science-for-petroleum-production-engineering-part-1.html#python-or-r"><i class="fa fa-check"></i><b>1.8</b> <code>Python</code> or <code>R</code></a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="dsppe-acquiring-the-data-part-2.html"><a href="dsppe-acquiring-the-data-part-2.html"><i class="fa fa-check"></i><b>2</b> DSPPE - Acquiring the Data (part 2)</a><ul>
 <li class="chapter" data-level="2.1" data-path="dsppe-acquiring-the-data-part-2.html"><a href="dsppe-acquiring-the-data-part-2.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
@@ -169,45 +172,73 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><img src="images/p1_cover.jpg" /><!-- --></p>
 <div id="the-old-vs-the-new" class="section level2">
 <h2><span class="header-section-number">1.1</span> The Old vs the New</h2>
-<p>In the last century, the production engineer built the well models one by one and analyzed the results also one by one. With the ubiquity of the personal computer, desktops and laptops, an unimaginable computational power has been put in our hands. But we need the right tools!</p>
-<p>Why -if we communicate data at gigabits per second-, are we still using a tool of the era of bits per second?</p>
-<p>The spreadsheet was invented in the 80’s and was a great invention. The beauty of it is that you can produce results right away. We are very thankful to Lotus 1-2-3 and Microsoft Excel for that. But let us remember that it was the 80’s –there was not internet, no tablets, data moved at 2400 bps, and real-time data acquisition was constrained to a handful of fields. Today, well data comes in gigabytes per minute and we know it is not humanly possible to tackle all the information to put it at good use.</p>
+<p>In the last century, the production engineer built the well models one by one and analyzed the results also one by one. With the ubiquity of the personal computer, desktops and laptops, an unimaginable computational power has been put in our hands. So, why takes so long to update well models? Why still are we doing it one-by-one?</p>
+<p>Why -if nowadays we transfer data at gigabits per second-, are we still using tools of the era of bits per second?</p>
+</div>
+<div id="do-worksheets-spreadsheets-makes-you-dumb" class="section level2">
+<h2><span class="header-section-number">1.2</span> Do worksheets, spreadsheets makes you dumb?</h2>
+<p>The spreadsheet was invented in the 80’s and was a great invention. The beauty of it is that you can produce results right away. The cells model has been so nice to us.</p>
+<p>We are very thankful to Lotus 1-2-3 and Microsoft Excel for that.</p>
+<p>But let us remember that it was the 80’s –there was not internet, no tablets, no smartphones, no laptops. Data moved at 2400 bps (or even less), and real-time data acquisition was constrained to a handful of fields with luxury mainframes. Today, well data comes in gigabytes per minute and we know it is not humanly possible to tackle all the information to put it at good use.</p>
 <p>The answer of this century is to that is start using automation, artificial intelligence, statistics, machine learning but first of all, data science. These are the keywords of the future. The future of the petroleum engineer.</p>
+<p>The thing is: there are not smart wells or smart fields, without smart tools and smart people and without modern computational statistics</p>
 </div>
 <div id="why-does-it-take-so-long-to-build-optimization-models" class="section level2">
-<h2><span class="header-section-number">1.2</span> Why does it take so long to build optimization models?</h2>
-<p>One of the things that always intrigued the production managers what is it that takes so long to build well models and a network models? One of the causes is that we have to enter the data manually; we have to double and triple check the data we are entering, calibrate and match the model; and – the most important of all-, we do enter the data without a context. What does that mean? It means we work on a well model in isolation without having the tools to validate our well data in the context of the field data or of other wells data (neighbors). Then when we have all our 77 or 177 wells ready, we received fresh well test data that contradicts earlier well tests! Go back to rework some models.</p>
-<p>Part of this conundrum is not the production engineer’s fault; it is just the way that well optimization software works or has been built: to attack a well one at a time and disconnected from the test data source.</p>
-<p>At Petronas we have been using for a while Python scripts to help to address the problem of single well modeling in a radical different way: by building well models with multiwell scanning, validation and analysis. With these techniques the engineer minimizes the manual data entering, validation, calibration and data qualification. This by itself represents a major advantage over the traditional way of doing well and network modeling. The additional power and discovery of oil gains from production optimization comes from applying basic statistics to the results or the calculations or simulation runs.</p>
-<p>The plots that you see in this post are just few samples of the work of well and network modeling on a field. I have changed names and numbers to make the exercise neutral.</p>
-<p>None of this is earth shattering new; it has been around for years but the digital tools that are making technology companies successful are taking time to take off in the production engineering field. Well, first, data science is hard. But enormously gratifying when you find hidden oil.</p>
+<h2><span class="header-section-number">1.3</span> Why does it take so long to build optimization models?</h2>
+<p>One of the things that always intrigued the production managers what is it that it takes so long in building well models and their corresponding network models? One of the causes is that the production engineers have to enter the data manually; have to double and triple check the data being entered; calibrate and match the model; and – the most important of all-, entering the data without a context, well by well.</p>
+<p>What does that mean? It means we work on a well model in isolation without having the tools to validate our well data in the context of the field data or of other well data (neighbors). Then, when we have all our 77 or 177 wells ready, we received fresh well test data that contradicts earlier well tests! Go back to rework the models.</p>
+<p>Part of this conundrum is not the production engineer’s fault; it is just the way that all well optimization software works or has been built: to attack a well one at a time and disconnected from the test data source or from other wells.</p>
+<p>Some companies have been using for a while Python scripts to help to address the problem of single well modeling in a radical different way: by building well models with multiwell scanning, quality control, validation and analysis, before and after the model has been built. With these techniques the engineer minimizes the manual data entering, validation, calibration and data qualification. This by itself represents a major advantage over the traditional way of doing well and network modeling and optimization. The additional power and discovery of oil gains from production optimization comes from applying basic statistics to:</p>
+<ul>
+<li><p>the well input data: quasi-static (PVT, completion, deviation survey) and dynamic (well tests, artificial lift data)</p></li>
+<li><p>nodal analysis oresults f the unconnected well</p></li>
+<li><p>results or calculations of the network simulation runs</p></li>
+</ul>
+</div>
+<div id="the-cheapest-oil-you-can-find" class="section level2">
+<h2><span class="header-section-number">1.4</span> The cheapest oil you can find?</h2>
+<p>The plots that you see in this post are just few samples of the work of well and network modeling on a field. Field names and well numbers have been anonymized to make the exercise neutral.</p>
+<p>None of this findings is earth shattering new; it has been around for years but the digital tools that are making high-tech companies successful are taking a little time to take off in the petroleum production engineering field.</p>
+<p>Well, first, data science is hard; statistics is harder. But enormously gratifying when you find hidden oil.</p>
+<blockquote>
+<p>Oil found with statistics and data science is the cheapest oil you can get.</p>
+</blockquote>
 </div>
 <div id="data-structures-are-our-friends" class="section level2">
-<h2><span class="header-section-number">1.3</span> Data Structures are our friends</h2>
-<p>One of the keys in data science is to get accustomed to analyze well production data by using dynamic tables. There is no best tool for analyzing production engineering data than Python Pandas. The pandas tables (yes, it is written in lowercase) are a magnificent object to manipulate, arrange, organize, calculate, clean, select, filter, analyze and plotting our production data. We created the Petronas PTech Engineering Library that includes dozens of scripts that make use of pandas and other Pythons packages such as numpy, scipy, matplotlib, PyQt4, pyqtgraph, bokeh, traits, etc. With the help of the libraries the engineer is able to analyze the well model data faster and in a more reliably way since all these tasks are done by algorithms written in Python, the world’s leading scripting language for scientists and engineers. And, it is open source.</p>
-<p>Your are curious? This is how a simple statement looks like.</p>
+<h2><span class="header-section-number">1.5</span> Data structures are our friends</h2>
+<p>One of the keys in data science is to get accustomed to analyze well production data by using dynamic tables. There is no best tool for analyzing production engineering data than dataframes or data tables in <code>Python</code> or <code>R</code>. The <code>pandas</code> tables (yes, it is written in lowercase) are magnificent objects to manipulate, arrange, organize, calculate, clean, select, filter, analyze and plotting production data.</p>
+<p>Engineering libraries for the Production Technologist can be created to include scripts that make use of production datasets with the help of packages such as numpy, scipy, matplotlib, PyQt4, pyqtgraph, bokeh, traits, etc., in the Python environment. With the computational libraries the engineer is able to analyze the well models data faster and in a more reliably way since all these tasks are done by digital algorithms, using scripting languages for scientists and engineers. And, best of all, it is open source.</p>
+<p>Your are curious? This is how a simple statement looks like in Python:</p>
 <div class="figure">
 <img src="images/grouping_al_methods.jpg" />
 
 </div>
-<p>From the data we can say that the biggest producers are wells producing by gas lift with an average of 944 blpd (barrels of liquid per day), a maximum of 2421 blpd in a total of 98 wells. The lowest producer is at 100 blpd.</p>
+<p>From the data we can tell that the biggest producers are wells producing by gas lift with an average of 944 blpd (barrels of liquid per day), a maximum of 2421 blpd in a total of 98 wells. The lowest producer is at 100 blpd.</p>
 </div>
 <div id="remember-garbage-in-garbage-out" class="section level2">
-<h2><span class="header-section-number">1.4</span> Remember Garbage In, Garbage Out</h2>
-<p>In next posts I will be showing simple Python and pandas scripts for petroleum production engineering. What we see in the next plot is a plotting technique for quality control of the well test data to be used in the well models. Before we run the models it is recommended that you run some scripts to qualify the data such as finding outliers or data points that do not belong there.</p>
+<h2><span class="header-section-number">1.6</span> Remember: Garbage In, Garbage Out</h2>
+<p>In next posts I will be showing simple <code>Python</code> and <code>R</code> scripts for petroleum production engineering.</p>
+<p>What we see in the next plot is a plotting technique for quality control of the well test data to be used in the well models. Before we run the models it is recommended that you run some scripts to perform some <code>quality control</code> on the data such as finding outliers or data points that do not belong there, or even addressing missing data.</p>
 <div class="figure">
 <img src="images/welltest_variables.jpg" />
 
 </div>
+<p>You will also observe in some examples how convenient is scanning stand-alone well models with <code>Python</code> scripts to detect outliers in well parameters such as: reservoir temperature, water salinity, gas specific gravity, API, injection gas data, GOR, pressures, etc.</p>
+<p>By refining these technique we will see later that we can even do quaility control on the results of the nodal analysis phase to calibrate and match the models to the well test data.</p>
 </div>
-<div id="the-python-notebooks-are-a-fit-for-production-engineers" class="section level2">
-<h2><span class="header-section-number">1.5</span> The Python notebooks are a fit for production engineers</h2>
-<p>The Python notebooks look ideal for the application of data science to well, network modeling and production optimization. There are many ways of running Python but I find the notebook the best method to transmit knowledge and share solutions with colleagues. The Python notebooks -lately renamed as Jupyter -, are widely known in the engineering community. You shouldn’t have any trouble finding assistance online. The same applies to Python. My favorite is stackoverflow.com. There are hundreds of engineering and scientific libraries around that will help to makes your production engineering job more efficient, accurate, profitable and fun.</p>
-<p>The Python notebook opens in a browser but if you want to make long and advanced scripts for petroleum engineering, there are plenty of good development applications or IDEs out there: Spyder, PyCharm and Eclipse, just to mention a few.</p>
+<div id="digital-notebooks-are-a-fit-for-engineers" class="section level2">
+<h2><span class="header-section-number">1.7</span> Digital Notebooks are a fit for Engineers</h2>
+<p>The Python notebooks look ideal for the application of data science to well, network modeling and production optimization. There are many ways of running Python but I find the notebook to be the best method to transmit knowledge and share solutions with colleagues.</p>
+<p>The Python notebooks -lately renamed as Jupyter -, are widely known in the engineering community. You shouldn’t have any trouble finding assistance online. The same applies to Python. My favorite place in the web to find help is <code>stackoverflow.com</code>. There are hundreds of engineering and scientific libraries around that will make your production engineering job more efficient, accurate, profitable and fun. And of course, faster.</p>
+<p>The Python notebook opens in a web browser but if you want to make long and advanced scripts for petroleum engineering, there are plenty of good development applications or IDEs out there: Spyder, PyCharm or Eclipse, just to mention a few.</p>
 <div class="figure">
 <img src="images/notebook.jpg" />
 
 </div>
+</div>
+<div id="python-or-r" class="section level2">
+<h2><span class="header-section-number">1.8</span> <code>Python</code> or <code>R</code></h2>
+<p>You have seen in other posts that I fell in love with <code>R</code>. But <code>Python</code> has not be forgotten. Both cover different needs and have their own space of application. Python is an scripting language that is easy to learn, very much similar to the human natural language, it has thousands of libraries that cover all sthe spectrum of industries and applied sciences. R focus is more on statistics. Let me rephrased that: “advanced statistics”. Both languages deal with data in their own style. While Python is a <em>general purpose</em> language, <code>R</code> strength is in resolving problem using vectorial abstractions. Both are beautiful, both are high level, and both fill different user needs. They are not competing but sharing the same information super highway.</p>
 
 </div>
 </div>

@@ -1,3 +1,6 @@
+---
+output: html_document
+---
 
 # Data Science for Petroleum Production Engineering (part 1)
 
@@ -11,16 +14,16 @@ In the last century, the production engineer built the well models one by one an
 
 Why -if nowadays we transfer data at gigabits per second-, are we still using tools of the era of bits per second?
 
-## Do Worksheets, spreadsheets makes you dumb?
-The spreadsheet was invented in the 80’s and was a great invention. The beauty
-of it is that you can produce results right away. 
+
+## Do worksheets, spreadsheets makes you dumb?
+The spreadsheet was invented in the 80’s and was a great invention. The beauty 
+of it is that you can produce results right away. The cells model has been so
+nice to us.
 
 We are very thankful to Lotus 1-2-3 and Microsoft Excel for that. 
 
 But let us remember that it was the 80’s –there was not internet, no tablets, no
-smartphones, no laptops. Data moved at 2400 bps, and real-time data acquisition
-was constrained to a handful of fields with luxury mainframes. Today, well data
-comes in gigabytes per minute and we know it is not humanly possible to tackle
+smartphones, no laptops. Data moved at 2400 bps (or even less), and real-time data acquisition was constrained to a handful of fields with luxury mainframes. Today, well data comes in gigabytes per minute and we know it is not humanly possible to tackle
 all the information to put it at good use.
 
 The answer of this century is to that is start using automation, artificial intelligence, statistics, machine learning but first of all, data science. These are the keywords of the future. The future of the petroleum engineer.
@@ -29,6 +32,7 @@ The thing is: there are not smart wells or smart fields,
               without smart tools and smart people 
               and without modern computational statistics
               
+
 
 ## Why does it take so long to build optimization models?
 
@@ -53,6 +57,7 @@ Some  companies have been using for a while Python scripts to help to address th
 * results or calculations of the network simulation runs
 
 
+## The cheapest oil you can find?
 The plots that you see in this post are just few samples of the work of well and
 network modeling on a field. Field names and well numbers have been anonymized
 to make the exercise neutral.
@@ -63,28 +68,44 @@ Well, first, data science is hard; statistics is harder. But enormously gratifyi
 
 > Oil found with statistics and data science is the cheapest oil you can get.
 
-## Data Structures are our friends
 
-One of the keys in data science is to get accustomed to analyze well production data by using dynamic tables. There is no best tool for analyzing production engineering data than Python Pandas. The pandas tables (yes, it is written in lowercase) are a magnificent object to manipulate, arrange, organize, calculate, clean, select, filter, analyze and plotting our production data. We created the Petronas PTech Engineering Library that includes dozens of scripts that make use of pandas and other Pythons packages such as numpy, scipy, matplotlib, PyQt4, pyqtgraph, bokeh, traits, etc.  With the help of the libraries the engineer is able to analyze the well model data faster and in a more reliably way since all these tasks are done by algorithms written in Python, the world’s leading scripting language for scientists and engineers. And, it is open source.
+## Data structures are our friends
 
-Your are curious? This is how a simple statement looks like.
+One of the keys in data science is to get accustomed to analyze well production data by using dynamic tables. There is no best tool for analyzing production engineering data than dataframes or data tables in `Python` or `R`. The `pandas` tables (yes, it is written in lowercase) are magnificent objects to manipulate, arrange, organize, calculate, clean, select, filter, analyze and plotting production data. 
+
+Engineering libraries for the Production Technologist can be created to include scripts that make use of production datasets with the help of packages such as numpy, scipy, matplotlib, PyQt4, pyqtgraph, bokeh, traits, etc., in the Python environment. With the computational libraries the engineer is able to analyze the well models data faster and in a more reliably way since all these tasks are done by digital algorithms, using  scripting languages for scientists and engineers. And, best of all, it is open source.
+
+Your are curious? This is how a simple statement looks like in Python:
 
 ![](images/grouping_al_methods.jpg)
 
-From the data we can say that the biggest producers are wells producing by gas lift with an average of 944 blpd (barrels of liquid per day), a maximum of 2421 blpd in a total of 98 wells. The lowest producer is at 100 blpd.
+From the data we can tell that the biggest producers are wells producing by gas lift with an average of 944 blpd (barrels of liquid per day), a maximum of 2421 blpd in a total of 98 wells. The lowest producer is at 100 blpd.
 
-## Remember Garbage In, Garbage Out
 
- In next posts I will be showing simple Python and pandas scripts for petroleum production engineering. What we see in the next plot is a plotting technique for quality control of the well test data to be used in the well models. Before we run the models it is recommended that you run some scripts to qualify the data such as finding outliers or data points that do not belong there. 
+## Remember: Garbage In, Garbage Out
+
+In next posts I will be showing simple `Python` and `R` scripts for petroleum production engineering. 
+
+What we see in the next plot is a plotting technique for quality control of the well test data to be used in the well models. Before we run the models it is recommended that you run some scripts to perform some `quality control` on the data such as finding outliers or data points that do not belong there, or even addressing missing data.
 
 ![](images/welltest_variables.jpg)
 
-## The Python notebooks are a fit for production engineers
+You will also observe in some examples how convenient is scanning stand-alone well models with `Python` scripts to detect outliers in well parameters such as: reservoir temperature, water salinity, gas specific gravity, API, injection gas data, GOR, pressures, etc.
 
-The Python notebooks look ideal for the application of data science to well, network modeling and production optimization. There are many ways of running Python but I find the notebook the best method to transmit knowledge and share solutions with colleagues. The Python notebooks -lately renamed as Jupyter -, are widely known in the engineering community. You shouldn’t have any trouble finding assistance online. The same applies to Python. My favorite is stackoverflow.com. There are hundreds of engineering and scientific libraries around that will help to makes your production engineering job more efficient, accurate, profitable and fun.
+By refining these technique we will see later that we can even do quaility control on the results of the nodal analysis phase to calibrate and match the models to the well test data.
 
-The Python notebook opens in a browser but if you want to make long and advanced scripts for petroleum engineering, there are plenty of good development applications or IDEs out there: Spyder, PyCharm and Eclipse, just to mention a few.
+
+## Digital Notebooks are a fit for Engineers
+The Python notebooks look ideal for the application of data science to well, network modeling and production optimization. There are many ways of running Python but I find the notebook to be the best method to transmit knowledge and share solutions with colleagues.
+
+The Python notebooks -lately renamed as Jupyter -, are widely known in the engineering community. You shouldn’t have any trouble finding assistance online. The same applies to Python. My favorite place in the web to find help is `stackoverflow.com`. There are hundreds of engineering and scientific libraries around that will make your production engineering job more efficient, accurate, profitable and fun. And of course, faster.
+
+The Python notebook opens in a web browser but if you want to make long and advanced scripts for petroleum engineering, there are plenty of good development applications or IDEs out there: Spyder, PyCharm or Eclipse, just to mention a few.
 
 ![](./images/notebook.jpg)
+
+## `Python` or `R`
+You have seen in other posts that I fell in love with `R`. But `Python` has not be forgotten. Both cover different needs and have their own space of application. Python is an scripting language that is easy to learn, very much similar to the human natural language, it has thousands of libraries that cover all sthe spectrum of industries and applied sciences. R focus is more on statistics. Let me rephrased that: "advanced statistics". Both languages deal with data in their own style. While Python is a *general purpose* language, `R` strength is in resolving problem using vectorial abstractions. Both are beautiful, both are high level, and both fill different user needs. They are not competing but sharing the same information super highway.
+
 
 
