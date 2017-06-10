@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html">
-<link rel="next" href="thp-bhp-matching-from-pdg-data.html">
+<link rel="prev" href="how-big-is-your-data.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -179,18 +179,68 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="how-big-is-your-data" class="section level1">
-<h1><span class="header-section-number">5</span> How Big is your Data</h1>
-<div id="everything-is-relative" class="section level2">
-<h2><span class="header-section-number">5.1</span> Everything is relative</h2>
-</div>
-<div id="how-big-is-big" class="section level2">
-<h2><span class="header-section-number">5.2</span> How big is big</h2>
-</div>
-<div id="tools-for-every-size" class="section level2">
-<h2><span class="header-section-number">5.3</span> Tools for every size</h2>
+<div id="thp-bhp-matching-from-pdg-data" class="section level1">
+<h1><span class="header-section-number">6</span> THP-BHP matching from PDG data</h1>
 <blockquote>
-<p>Why is it called big data?</p>
+<p>TODO<br />
+* Add small introduction or abstract for the article</p>
+</blockquote>
+<div id="matching-is-not-forcing" class="section level2">
+<h2><span class="header-section-number">6.1</span> Matching is not forcing</h2>
+<p>we have to be careful with what the term “matching” means and represents. First of all, what matching is NOT is forcing the calculated BHP (<span class="math inline">\(BHP_c\)</span>) from the VLP to be the same as your measured BHP (<span class="math inline">\(BHP_m\)</span>). Unfortunately, this is how generally is interpreted because of how easy the software allows you do do just that. But again, forcing or fudging whatever the the well data or parameters the software allows you to tweak to match the calculated BHP with the measured BHP doesn’t mean you are matching the model.</p>
+<p>Let me tell you this: matching a well is not a one-off task; it is a process. It starts with some common sense first. And that has to do mainly with the data. If you take this well modeling as a task your matching would only last just one day: the day that your forced the matching with one data point. That is not a well model. A well model is a mathematical or computational representation of your real well, which mean that the IPR, VLP, PVT, temperature correlations or mechanistic models have to represent your real well with some level of accuracy. Not for one day but for a longer period of time.</p>
+<blockquote>
+<p>TODO<br />
+* add well data to reproduce this plot<br />
+* can it be a real well?<br />
+* R or Python?</p>
+</blockquote>
+<div class="figure">
+<img src="https://ci6.googleusercontent.com/proxy/_Vyn8Gp4JvZhQv4XVOv_go3VHng8lE4B1vgOXb3-TEPbUDw6Zg6oi2PATrXcsMcOWo6lFbLyA9KcFc9VV5S4lATupowkdjdFsXJr0ylxmYT0APC1tTkbk6ocfPCgouzU5E-laAlriVPVm3zY0HXzn2l8d6fKLZuCJYaIn8AqiZHancHsITe1yyjjsqrjDWQCIydv5Jt_NJQ1Bjsq8OKlIuYyBxTjvTP0lww=s0-d-e1-ft#https://s3.amazonaws.com/higherlogicdownload/SPE/Contacts/419352ea-aa53-41d8-8ceb-72c6bce74924/TinyMCE/kbYjGlFPR4WMMMxf0P9x_Vlp-matching-before.jpg" alt="vlp-matching-before-tuning" />
+<p class="caption">vlp-matching-before-tuning</p>
+</div>
+</div>
+<div id="dp-plot" class="section level2">
+<h2><span class="header-section-number">6.2</span> DP plot</h2>
+<p>To show you what I mean by that let’s look at the depth vs. pressure plot (PD) or flowing gradient for any VLP model. Let’s call them <span class="math inline">\(K_T\)</span> to the real VLP that better follows your well behavior; <span class="math inline">\(K_A\)</span> to the VLP correlation that you selected. From the figure we can see that the <span class="math inline">\(BHP_c\)</span> exceeds the measured pressure or <span class="math inline">\(BHP_m\)</span> from your permanent downhole gauge (PDG).</p>
+<p>There will be many things in the software that you can tune to force your <span class="math inline">\(BHP_c\)</span> to match the <span class="math inline">\(BHP_m\)</span>. One of them is to switch the VLP correlation or mechanistic model that better follows your pressure point.</p>
+<p>So, the first question is: does this VLP model really represents your well or your field? How long has this correlation being used? Is there a good history of this VLP matching other wells in the neighborhood? So, you can see how easily you can change between VLP models from 10 to 1 available, right? But if you do that this is how you could end up:</p>
+<div class="figure">
+<img src="https://ci3.googleusercontent.com/proxy/poegHsibYVTZQXf4FFSojqQCEdNEdlzFma_6CWJkdvkU5c_DnRItpAJdsTrxRsAPncgOgSHftwtDZBYl9mLpSZn1ISy8F-CSeuNq005mzWtLVfEbGz29Q7STgK60VR4H82vNEB5HIaBmWRngmjBmcf365w_7sHGF_FbKd6C9Dd6gVnhxvKf-Ds6A1txg2DCSoLPcHB12TXMoMeMy6PCNOg5-REs-WdPivQ=s0-d-e1-ft#https://s3.amazonaws.com/higherlogicdownload/SPE/Contacts/419352ea-aa53-41d8-8ceb-72c6bce74924/TinyMCE/xkatwig3TeyWdXefGXDn_vlp-matching-after.jpg" alt="vlp-matching-after" />
+<p class="caption">vlp-matching-after</p>
+</div>
+<p>In the IPR/VLP figure you match the <span class="math inline">\(BHP_m\)</span> but your production rate doesn’t make sense anymore. Why? Because if you are forcing the match of the BHP is finding a point on the horizontal pressure line. Now the pressure matches but the flow rate could be lower or higher than the real production. And this is just one of the many cases. This is not matching; it is forcing a match. Avoid this path.</p>
+</div>
+<div id="it-is-not-only-the-vlp-curve-dont-blame-the-tubing-performance-curve" class="section level2">
+<h2><span class="header-section-number">6.3</span> It is not only the VLP curve / Don’t blame the tubing performance curve</h2>
+<p>There are few things that should be checked first; it is not just the VLP model selection. These are few that I have seen to have an effect on the VLP. These other well parameters may cause a considerable effect on the behavior of the VLP curve but are usually disregarded or not paid enough attention:</p>
+<blockquote>
+TODO<br />
+* show the effect with a dataset<br />
+* make a sensitivity plot<br />
+* Use R<br />
+
+</blockquote>
+<ul>
+<li>PVT data. The bubble point, GOR and selection of the PVT correlations.</li>
+<li>The wellhead temperature and the HTC (heat transfer coefficient). If these are not correct, your model may not even run or give you weird values. You will be surprised that not many read the wellhead temperature.</li>
+<li>The completion design properly entered. This is not often paid careful attention: the ID of the tubing, change of diameters, depth of a valve. And guess what? The downhole equipment does not even represent what you have in the well; an outdated well schematic.</li>
+<li>If you are injecting gas, the density and composition of that gas could make nearly impossible to perform any matching. Same with the valve data, orifice size, injection point, injection rate, free gas and solution gas.</li>
+<li>How reliable your IPR curve. The less data you used to define your IPR, then the less accurate your IPR model will be, therefore, the less likely your flow rate will match your BHP.</li>
+<li>Not all wells or field are so lucky of having a permanent downhole gauge. If you have it, then this outs you in an advantageous position compared to others that can barely afford a flowing or static gradient survey every two or three years.</li>
+<li>The well test production data. Very important to cross-validate your BHP measurements. Both can be used to perform your model matching. I am talking about the production rate, tubing head pressure, watercut and GOR. You cannot expect 5% accuracy in a model when you have 20% uncertainties in the value of the GOR or 15% in the THP.</li>
+</ul>
+</div>
+<div id="closing" class="section level2">
+<h2><span class="header-section-number">6.4</span> Closing</h2>
+<p>One more thing.</p>
+<p>The standard practice of resolving well models on a well by well basis, the current paradigm, will take longer and most likely give inaccurate results. Think about doing well modeling under the context of all the wells in the field and observing all the well parameters of the well neighbors under study. You will see dramatic improvements.</p>
+<p>When we analyze the well data under a wider context, like the field, then the well parameters start making sense. One value, like wellhead temperature or wellhead pressure or reservoir temperature alone, in one well by itself, may misled us if it not compared with its peer wells. The temperatures or pressures may be out of range in a standalone study but if we include in the study the other wells, then we can expect better results.</p>
+<p>I am attaching a couple of figures that shows one of the cases of the effect of a VLP correlation forced to match a downhole pressure. There are more, of course.</p>
+<blockquote>
+TODO<br />
+* Is there a way to show an schematic of both approaches?<br />
+
 </blockquote>
 
 </div>
@@ -200,8 +250,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="r-and-the-search-of-the-ideal-language-for-petroleum-engineering.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="thp-bhp-matching-from-pdg-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="how-big-is-your-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -230,7 +280,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/how_big_is_your_data.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/thp_bhp_matching_pdg.Rmd",
 "text": "Edit"
 },
 "download": ["data_science_ptech.pdf", "data_science_ptech.epub"],
