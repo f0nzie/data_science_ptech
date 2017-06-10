@@ -53,7 +53,23 @@ After the script finishes gathering data from the last well you will end up with
 
 ## The Excel way :(
 
-Yes, it is Excel. But we just use it as a legacy so any production technologist can see the output without much complication. Some have questioned why we do all this data processing with Python instead of using Excel. The question is very simple, and I think you will quickly understand if you have ever worked with datasets in Excel. I will just cite few of the inconveniences: (1) the macros VBA are alright if you are writing less than a hundred of lines of code; (2) the code in VBA is difficult to maintain and there is no version control like with git or other; (3) Microsoft VBA has its own way of doing things and you have to learn a lot about the internals of the MS libraries if you want to do little above of the ordinary calculations and plotting; (4) VBA code is difficult to share with colleagues and when you make a change or update the code you have to send again the big workbook, in other words there is no updating process embedded within Excel and VBA. Don't get me wrong. I have done terrific things with Excel VBA but it is painful by the lack of an engineering or scientific community behind as is the case with Python. Let's say that Excel is good at table visualization and anybody can open and understand it.
+Yes, it is Excel. But we just use it as a legacy tool so we can share the results with any production technologist without much complication. 
+
+Some have questioned why we do all this data processing with Python instead of using Excel. The question is very simple, and I think you will quickly understand if you have ever worked with datasets in Excel. I will just cite few of the inconveniences: 
+
+(1) the macros VBA are alright if you are writing less than a hundred of lines of code; 
+
+(2) the code in VBA is difficult to maintain and there is no version control like with Git or similar. Version control is essential in dealing with data analysis.
+
+(3) Microsoft VBA has its own way of doing things and you have to learn a lot about the internals of the MS libraries if you want to do little above of the ordinary calculations and plotting; 
+
+(4) VBA code is difficult to share with colleagues and when you make a change or update the code you have to send again a big workbook, in other words there is no updating process embedded within Excel and VBA to load new code. 
+
+(5) Reproducibility
+
+(6) Antiquated plotting
+
+Don't get me wrong. I have done terrific things with Excel VBA but it is painful by the lack of an engineering or scientific community behind as is the case with Python or R. Let's say that Excel is good at table visualization that anybody can open, understand it and do some basic plotting around it.
 
 But as you get immersed with Python and pandas you will see that using Excel as data containers is purely optional; there are other powerful data structures available out there.
 
@@ -64,7 +80,9 @@ The Python script that open the well models and pulls the data is this:
 
 ![](./images/script-open-model.jpg)
 
-Each of the lines in the script is explained through a comment above. But let’s briefly explain what this script does. What we are trying to achieve is reading all the Prosper well models located under the folder PISC. You are interested in reading some variables from these models and putting them in a table-like structure for statistical analysis later. These variables have been defined in the input workbook –explained above. 
+Each of the lines in the script is explained through a comment above. The comments come always after the pound `#` sign. 
+
+Let’s briefly explain what this script does. What we are trying to achieve is reading all the Prosper well models located under the folder PISC. You are interested in reading some variables from these models and putting them in a table-like structure for statistical analysis later. These variables have been defined in the input workbook –explained above. 
 
 Loading the dataset
 
