@@ -6,9 +6,9 @@ knitr::include_graphics(rep("images/logo_p2.jpg", 1))
 ```
 
 
-## Introduction
+## An engineering library
 
-In the past session we got an introduction to the multiwell statistics package showing a few of the things that we can do with the Petronas PTech Engineering Library. Now, we will explore some more functionality. It is incredible the huge amount of information when we get from all the wells in one scan pass. The data starts to have sense. A well in isolation or standalone doesn’t tell used much about the field or differences between well parameters from well to well. This is where the power of the multiwell scanning resides. 
+In the past session we got an introduction to the multiwell statistics package showing a few of the things that we can do with an engineering library implemented with Python. Now, we will explore some more functionality. It is incredible the huge amount of information when we get from all the wells in one scan pass. The well data starts to have sense. A well in isolation or standalone doesn’t tell used much about the field or differences between well parameters from well to well. This is where the power of the multiwell scanning scrip resides. 
 
 
 
