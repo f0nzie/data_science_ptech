@@ -36,9 +36,15 @@ workbooks; one for PVT analysis, another for well test, or gas lift, or IPR or
 VLP selection. In another post I will enter in detail about this input
 worksheet.
 
-The interesting thing to note here is that we can select what well variables we will be extracted from each of the well models and written to the dataset. You can do this to 10 well, 50 wells, 100 or 1000 wells. You can gain great insights from from comparing all the well models at once. Soon it will become evident which is one the IPR correlation most used in the company, what PVT correlations give a better matching or which VLP adjust better to the well or field.
+The interesting thing to note here is that we can select what well variables we
+will be extracted from each of the well models and written to the dataset. You
+can do this to 10 well, 50 wells, 100 or 1000 wells. You can gain great insights
+from from comparing all the well models at once. Soon it will become evident
+which is one the IPR correlation most used in the company, what PVT correlations
+give a better matching or which VLP adjust better to the well or field.
 
-## Dataframes
+
+## Data frames and data tables
 
 After the script finishes gathering data from the last well you will end up with an output file. The tabular form of the data in that output file is what is called in Python pandas a dataframe. The table looks like this:
 
