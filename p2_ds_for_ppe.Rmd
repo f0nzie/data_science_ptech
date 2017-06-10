@@ -10,6 +10,9 @@ knitr::include_graphics(rep("images/logo_p2.jpg", 1))
 
 In the past session we got an introduction to the multiwell statistics package showing a few of the things that we can do with an engineering library implemented with Python. Now, we will explore some more functionality. It is incredible the huge amount of information when we get from all the wells in one scan pass. The well data starts to have sense. A well in isolation or standalone doesn’t tell used much about the field or differences between well parameters from well to well. This is where the power of the multiwell scanning scrip resides. 
 
+> TODO \
+* what is well scanning? \
+* add schematic \
 
 
 ## Multiwell Scanning
@@ -29,7 +32,7 @@ the input variables look like:
 
 These are few of the variables that we want to pull from each of the well models
 to be scanned. Note that the first 7 columns belong to the decomposition of the
-Petex OpenServer variables. I created this input file to make possible a
+Petex `OpenServer1` variables. I created this input file to make possible a
 repeatable selection process. In one of the datasets we will see 94
 variable-columns; in other maybe less than 40. You can also have a set of input
 workbooks; one for PVT analysis, another for well test, or gas lift, or IPR or
@@ -40,8 +43,10 @@ The interesting thing to note here is that we can select what well variables we
 will be extracted from each of the well models and written to the dataset. You
 can do this to 10 well, 50 wells, 100 or 1000 wells. You can gain great insights
 from from comparing all the well models at once. Soon it will become evident
-which is one the IPR correlation most used in the company, what PVT correlations
+which is one is the most IPR correlation used in the company, what PVT correlations
 give a better matching or which VLP adjust better to the well or field.
+> TODO \
+* add statistics for most use IPR
 
 
 ## Data frames and data tables
@@ -49,6 +54,10 @@ give a better matching or which VLP adjust better to the well or field.
 After the script finishes gathering data from the last well you will end up with an output file. The tabular form of the data in that output file is what is called a data frame or a data table. The table in our example will like this:
 
 ![](./images/multiwells.jpg)
+
+> TODO \
+* data frame Python, data frame R \
+* data table in R \
 
 
 ## The Excel way :(
@@ -95,11 +104,16 @@ Immediately with the execution we get some information about the well collection
 
 ![](./images/result_well_collection.jpg)
 
+> TODO \
+* add link to datasets in Github
+
+
 ## Plotting
 
 To start plotting, we can just write:
 
 ![](./images/analysts.jpg)
+
 
 For artificial lift:
 
@@ -113,6 +127,10 @@ And for the PVT correlations:
 
 ![](./images/pvt_corrs.jpg)
 
+> TODO \
+*  can we put all these little plot into one?
+
+
 
 ## What are we learning so far?
 
@@ -122,8 +140,8 @@ The advantage here, with the Python scripting library, is that we are acting on 
 
 ![](./images/ipr_corrs.jpg)
 
-TODO
-* add conclusions
-* maybe more plots
-* add code and links to code
+> TODO \
+* add conclusions \
+* maybe more plots \
+* add code and links to code \
 
