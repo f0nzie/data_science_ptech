@@ -110,7 +110,8 @@
 <blockquote>
 <p>TODO<br />
 * add well data to reproduce this plot<br />
-* can it be a real well?</p>
+* can it be a real well?<br />
+* R or Python?</p>
 </blockquote>
 <div class="figure">
 <img src="https://ci6.googleusercontent.com/proxy/_Vyn8Gp4JvZhQv4XVOv_go3VHng8lE4B1vgOXb3-TEPbUDw6Zg6oi2PATrXcsMcOWo6lFbLyA9KcFc9VV5S4lATupowkdjdFsXJr0ylxmYT0APC1tTkbk6ocfPCgouzU5E-laAlriVPVm3zY0HXzn2l8d6fKLZuCJYaIn8AqiZHancHsITe1yyjjsqrjDWQCIydv5Jt_NJQ1Bjsq8OKlIuYyBxTjvTP0lww=s0-d-e1-ft#https://s3.amazonaws.com/higherlogicdownload/SPE/Contacts/419352ea-aa53-41d8-8ceb-72c6bce74924/TinyMCE/kbYjGlFPR4WMMMxf0P9x_Vlp-matching-before.jpg" alt="vlp-matching-before-tuning" />
@@ -130,7 +131,14 @@
 </div>
 <div id="it-is-not-only-the-vlp-curve-dont-blame-the-tubing-performance-curve" class="section level2">
 <h2><span class="header-section-number">7.3</span> It is not only the VLP curve / Don’t blame the tubing performance curve</h2>
-<p>There are few things that should be checked first; it is not just the VLP model selection. These are few that I have seen to have an effect on the VLP, in addition to what the other gentlemen mentioned, these well parameters may cause a huge effect on the behavior of the VLP curve but are usually disregarded or not paid enough attention:</p>
+<p>There are few things that should be checked first; it is not just the VLP model selection. These are few that I have seen to have an effect on the VLP. These other well parameters may cause a considerable effect on the behavior of the VLP curve but are usually disregarded or not paid enough attention:</p>
+<blockquote>
+TODO<br />
+* show the effect with a dataset<br />
+* make a sensitivity plot<br />
+* Use R<br />
+
+</blockquote>
 <ul>
 <li>PVT data. The bubble point, GOR and selection of the PVT correlations.</li>
 <li>The wellhead temperature and the HTC (heat transfer coefficient). If these are not correct, your model may not even run or give you weird values. You will be surprised that not many read the wellhead temperature.</li>
@@ -143,7 +151,15 @@
 </div>
 <div id="closing" class="section level2">
 <h2><span class="header-section-number">7.4</span> Closing</h2>
-<p>Another thing. The standard practice of resolving well models on a well by well basis, the current paradigm, will take longer and would give inaccurate results. Think about doing well modeling under the context of all the wells in the field and observing all the well parameters of the well neighbors under study. You will see dramatic improvements. When we analyze the well data under a wider context, like the field, then the well parameters start making sense. One value, like wellhead temperature or wellhead pressure or reservoir temperature alone, in one well by itself, may misled us if it not compared with its peer wells. The temperatures or pressures may be out of range in a standalone study but if we include in the study the other wells, then we can expect better results. I am attaching a couple of figures that shows one of the cases of the effect of a VLP correlation forced to match a downhole pressure. There are more, of course.</p>
+<p>One more thing.</p>
+<p>The standard practice of resolving well models on a well by well basis, the current paradigm, will take longer and most likely give inaccurate results. Think about doing well modeling under the context of all the wells in the field and observing all the well parameters of the well neighbors under study. You will see dramatic improvements.</p>
+<p>When we analyze the well data under a wider context, like the field, then the well parameters start making sense. One value, like wellhead temperature or wellhead pressure or reservoir temperature alone, in one well by itself, may misled us if it not compared with its peer wells. The temperatures or pressures may be out of range in a standalone study but if we include in the study the other wells, then we can expect better results.</p>
+<p>I am attaching a couple of figures that shows one of the cases of the effect of a VLP correlation forced to match a downhole pressure. There are more, of course.</p>
+<blockquote>
+TODO<br />
+* Is there a way to show an schematic of both approaches?<br />
+
+</blockquote>
 
 </div>
 </div>

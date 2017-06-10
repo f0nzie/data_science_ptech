@@ -31,7 +31,12 @@ Avoid this path.
 
 
 ## It is not only the VLP curve / Don't blame the tubing performance curve
-There are few things that should be checked first; it is not just the VLP model selection. These are few that I have seen to have an effect on the VLP, in addition to what the other gentlemen mentioned, these well parameters may cause a huge effect on the behavior of the VLP curve but are usually disregarded or not paid enough attention:
+There are few things that should be checked first; it is not just the VLP model selection. These are few that I have seen to have an effect on the VLP. These other well parameters may cause a considerable effect on the behavior of the VLP curve but are usually disregarded or not paid enough attention:
+
+> TODO   
+* show the effect with a dataset\
+* make a sensitivity plot\
+* Use R\
 
 - PVT data. The bubble point, GOR and selection of the PVT correlations.
 - The wellhead temperature and the HTC (heat transfer coefficient). If these are not correct, your model may not even run or give you weird values. You will be surprised that not many read the wellhead temperature.
@@ -43,5 +48,14 @@ There are few things that should be checked first; it is not just the VLP model 
 
 
 ## Closing
-Another thing. The standard practice of resolving well models on a well by well basis, the current paradigm, will take longer and would give inaccurate results. Think about doing well modeling under the context of all the wells in the field and observing all the well parameters of the well neighbors under study. You will see dramatic improvements. When we analyze the well data under a wider context, like the field, then the well parameters start making sense. One value, like wellhead temperature or wellhead pressure or reservoir temperature alone, in one well by itself, may misled us if it not compared with its peer wells. The temperatures or pressures may be out of range in a standalone study but if we include in the study the other wells, then we can expect better results.
+One more thing. 
+
+The standard practice of resolving well models on a well by well basis, the current paradigm, will take longer and most likely give inaccurate results. Think about doing well modeling under the context of all the wells in the field and observing all the well parameters of the well neighbors under study. You will see dramatic improvements. 
+
+When we analyze the well data under a wider context, like the field, then the well parameters start making sense. One value, like wellhead temperature or wellhead pressure or reservoir temperature alone, in one well by itself, may misled us if it not compared with its peer wells. The temperatures or pressures may be out of range in a standalone study but if we include in the study the other wells, then we can expect better results.
+
 I am attaching a couple of figures that shows one of the cases of the effect of a VLP correlation forced to match a downhole pressure. There are more, of course. 
+
+> TODO\
+* Is there a way to show an schematic of both approaches?\
+
