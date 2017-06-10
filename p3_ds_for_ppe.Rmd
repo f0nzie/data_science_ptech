@@ -71,11 +71,11 @@ Reading the GAP model requires a connection to `OpenServer` through a COM server
 
 We show below a pseudo-code explaining the steps for reading GAP variables. Writing to GAP is similar.
 
-TODO
-- [ ] `explain the GAP variable`
-- [ ] `show few examples of the variables: GAP.well[0].bla-bla-bla`
-- [ ] `show a basic code to read the variables to a dataframe. Pseudo-code`
-- [ ] ` link to the code`
+> TODO /
+* [ ] `explain the GAP variable`
+* [ ] `show few examples of the variables: GAP.well[0].bla-bla-bla`
+* [ ] `show a basic code to read the variables to a dataframe. Pseudo-code`
+* [ ] ` link to the code`
 
 
 
@@ -102,16 +102,15 @@ TODO
 
 
 
-
-
 ## Gathering auxiliary data
 
 Collecting the data for the network model is not a major problem; most of the data is coming from the well models that we saw in Part 2 (`add link`). At this stage, the well models have been matched to their **IPR** (inflow performance relationship), VLP**(vertical lift performance), and calibrated against their latest well test and FGS (flowing gradient surveys).
 
 Additional data for the network model such as constraints, wells on-line, choke orifice size, flowline dimensions, separator pressures, total field production are entered directly in the model in GAP.
 
-TODO
-`what else?`
+> TODO \
+* `what else?` \
+* add links in "gathering auxiliary data". para above. \
 
 
 
