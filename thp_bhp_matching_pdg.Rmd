@@ -1,4 +1,6 @@
 # THP-BHP matching from PDG data
+> Note. This article appeared in SPE Reservoir on May __.
+
 
 > TODO \
 * Add small introduction or abstract for the article \
