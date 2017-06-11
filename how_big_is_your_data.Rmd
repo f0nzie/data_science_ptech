@@ -7,5 +7,16 @@
 ## Tools for every size
 
 
-> Why is it called big data? 
+
+> TODO \
+* Why is it called big data? \
+* where big data is coming from? \
+* what tools do we use for megabytes, gigabytes and terabytes \
+* who manages gigagbytes and terabytes \
+* is there bigger data? \
+
+> FIGURES \
+* 
+
+
 
