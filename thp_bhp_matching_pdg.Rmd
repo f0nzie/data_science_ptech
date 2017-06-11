@@ -1,11 +1,14 @@
 # THP-BHP matching from PDG data
+> Note. This article appeared in SPE Reservoir on May __.
 
-> TODO   
-* Add small introduction or abstract for the article  
+
+> TODO \
+* Add small introduction or abstract for the article \
+* can we document with data? \
 
 ## Matching is not forcing
 
-we have to be careful with what the term "matching" means and represents. First of all, what matching is NOT is forcing the calculated BHP ($BHP_c$) from the VLP to be the same as your measured BHP ($BHP_m$). Unfortunately, this is how generally is interpreted because of how easy the software allows you do do just that. But again, forcing or fudging whatever the the well data or parameters the software allows you to tweak to match the calculated BHP with the measured BHP doesn't mean you are matching the model.
+we have to be careful with what the term "matching" means and represents. First of all, let's define what matching is NOT. It is NOT forcing the calculated BHP ($BHP_c$) from the VLP to be the same as your measured BHP ($BHP_m$). Unfortunately, this is how generally is interpreted because of how easy the software allows you do do just that. But again, forcing or fudging whatever the the well data or parameters the software allows you to tweak to match the calculated BHP with the measured BHP doesn't mean you are matching the model.
 
 Let me tell you this: matching a well is not a one-off task; it is a process. It starts with some common sense first. And that has to do mainly with the data. If you take this well modeling as a task your matching would only last just one day: the day that your forced the matching with one data point. That is not a well model. A well model is a mathematical or computational representation of your real well, which mean that the IPR, VLP, PVT, temperature correlations or mechanistic models have to represent your real well with some level of accuracy. Not for one day but for a longer period of time.
 
@@ -13,6 +16,8 @@ Let me tell you this: matching a well is not a one-off task; it is a process. It
 * add well data to reproduce this plot   
 * can it be a real well?   
 * R or Python?    
+* add figure for the cycle of mathcing well models \
+
 
 ![vlp-matching-before-tuning](https://ci6.googleusercontent.com/proxy/_Vyn8Gp4JvZhQv4XVOv_go3VHng8lE4B1vgOXb3-TEPbUDw6Zg6oi2PATrXcsMcOWo6lFbLyA9KcFc9VV5S4lATupowkdjdFsXJr0ylxmYT0APC1tTkbk6ocfPCgouzU5E-laAlriVPVm3zY0HXzn2l8d6fKLZuCJYaIn8AqiZHancHsITe1yyjjsqrjDWQCIydv5Jt_NJQ1Bjsq8OKlIuYyBxTjvTP0lww=s0-d-e1-ft#https://s3.amazonaws.com/higherlogicdownload/SPE/Contacts/419352ea-aa53-41d8-8ceb-72c6bce74924/TinyMCE/kbYjGlFPR4WMMMxf0P9x_Vlp-matching-before.jpg)
 
@@ -55,6 +60,12 @@ The standard practice of resolving well models on a well by well basis, the curr
 When we analyze the well data under a wider context, like the field, then the well parameters start making sense. One value, like wellhead temperature or wellhead pressure or reservoir temperature alone, in one well by itself, may misled us if it not compared with its peer wells. The temperatures or pressures may be out of range in a standalone study but if we include in the study the other wells, then we can expect better results.
 
 I am attaching a couple of figures that shows one of the cases of the effect of a VLP correlation forced to match a downhole pressure. There are more, of course. 
+
+## Glossary
+VLP: Vertical Lift Performance curve \
+TPC: Tubing Performance Curve \
+
+
 
 > TODO\
 * Is there a way to show an schematic of both approaches?\

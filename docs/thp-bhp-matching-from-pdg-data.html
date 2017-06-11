@@ -159,6 +159,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6.2" data-path="thp-bhp-matching-from-pdg-data.html"><a href="thp-bhp-matching-from-pdg-data.html#dp-plot"><i class="fa fa-check"></i><b>6.2</b> DP plot</a></li>
 <li class="chapter" data-level="6.3" data-path="thp-bhp-matching-from-pdg-data.html"><a href="thp-bhp-matching-from-pdg-data.html#it-is-not-only-the-vlp-curve-dont-blame-the-tubing-performance-curve"><i class="fa fa-check"></i><b>6.3</b> It is not only the VLP curve / Don’t blame the tubing performance curve</a></li>
 <li class="chapter" data-level="6.4" data-path="thp-bhp-matching-from-pdg-data.html"><a href="thp-bhp-matching-from-pdg-data.html#closing"><i class="fa fa-check"></i><b>6.4</b> Closing</a></li>
+<li class="chapter" data-level="6.5" data-path="thp-bhp-matching-from-pdg-data.html"><a href="thp-bhp-matching-from-pdg-data.html#glossary"><i class="fa fa-check"></i><b>6.5</b> Glossary</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -183,18 +184,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="thp-bhp-matching-from-pdg-data" class="section level1">
 <h1><span class="header-section-number">6</span> THP-BHP matching from PDG data</h1>
 <blockquote>
-<p>TODO<br />
-* Add small introduction or abstract for the article</p>
+<p>Note. This article appeared in SPE Reservoir on May __.</p>
+</blockquote>
+<blockquote>
+TODO<br />
+* Add small introduction or abstract for the article<br />
+* can we document with data?<br />
+
 </blockquote>
 <div id="matching-is-not-forcing" class="section level2">
 <h2><span class="header-section-number">6.1</span> Matching is not forcing</h2>
-<p>we have to be careful with what the term “matching” means and represents. First of all, what matching is NOT is forcing the calculated BHP (<span class="math inline">\(BHP_c\)</span>) from the VLP to be the same as your measured BHP (<span class="math inline">\(BHP_m\)</span>). Unfortunately, this is how generally is interpreted because of how easy the software allows you do do just that. But again, forcing or fudging whatever the the well data or parameters the software allows you to tweak to match the calculated BHP with the measured BHP doesn’t mean you are matching the model.</p>
+<p>we have to be careful with what the term “matching” means and represents. First of all, let’s define what matching is NOT. It is NOT forcing the calculated BHP (<span class="math inline">\(BHP_c\)</span>) from the VLP to be the same as your measured BHP (<span class="math inline">\(BHP_m\)</span>). Unfortunately, this is how generally is interpreted because of how easy the software allows you do do just that. But again, forcing or fudging whatever the the well data or parameters the software allows you to tweak to match the calculated BHP with the measured BHP doesn’t mean you are matching the model.</p>
 <p>Let me tell you this: matching a well is not a one-off task; it is a process. It starts with some common sense first. And that has to do mainly with the data. If you take this well modeling as a task your matching would only last just one day: the day that your forced the matching with one data point. That is not a well model. A well model is a mathematical or computational representation of your real well, which mean that the IPR, VLP, PVT, temperature correlations or mechanistic models have to represent your real well with some level of accuracy. Not for one day but for a longer period of time.</p>
 <blockquote>
-<p>TODO<br />
+TODO<br />
 * add well data to reproduce this plot<br />
 * can it be a real well?<br />
-* R or Python?</p>
+* R or Python?<br />
+* add figure for the cycle of mathcing well models<br />
+
 </blockquote>
 <div class="figure">
 <img src="https://ci6.googleusercontent.com/proxy/_Vyn8Gp4JvZhQv4XVOv_go3VHng8lE4B1vgOXb3-TEPbUDw6Zg6oi2PATrXcsMcOWo6lFbLyA9KcFc9VV5S4lATupowkdjdFsXJr0ylxmYT0APC1tTkbk6ocfPCgouzU5E-laAlriVPVm3zY0HXzn2l8d6fKLZuCJYaIn8AqiZHancHsITe1yyjjsqrjDWQCIydv5Jt_NJQ1Bjsq8OKlIuYyBxTjvTP0lww=s0-d-e1-ft#https://s3.amazonaws.com/higherlogicdownload/SPE/Contacts/419352ea-aa53-41d8-8ceb-72c6bce74924/TinyMCE/kbYjGlFPR4WMMMxf0P9x_Vlp-matching-before.jpg" alt="vlp-matching-before-tuning" />
@@ -238,6 +246,12 @@ TODO<br />
 <p>The standard practice of resolving well models on a well by well basis, the current paradigm, will take longer and most likely give inaccurate results. Think about doing well modeling under the context of all the wells in the field and observing all the well parameters of the well neighbors under study. You will see dramatic improvements.</p>
 <p>When we analyze the well data under a wider context, like the field, then the well parameters start making sense. One value, like wellhead temperature or wellhead pressure or reservoir temperature alone, in one well by itself, may misled us if it not compared with its peer wells. The temperatures or pressures may be out of range in a standalone study but if we include in the study the other wells, then we can expect better results.</p>
 <p>I am attaching a couple of figures that shows one of the cases of the effect of a VLP correlation forced to match a downhole pressure. There are more, of course.</p>
+</div>
+<div id="glossary" class="section level2">
+<h2><span class="header-section-number">6.5</span> Glossary</h2>
+<p>VLP: Vertical Lift Performance curve<br />
+TPC: Tubing Performance Curve<br />
+</p>
 <blockquote>
 TODO<br />
 * Is there a way to show an schematic of both approaches?<br />
