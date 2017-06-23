@@ -108,4 +108,13 @@ The Python notebook opens in a web browser but if you want to make long and adva
 You have seen in other posts that I fell in love with `R`. But `Python` has not be forgotten. Both cover different needs and have their own space of application. Python is an scripting language that is easy to learn, very much similar to the human natural language, it has thousands of libraries that cover all sthe spectrum of industries and applied sciences. R focus is more on statistics. Let me rephrased that: "advanced statistics". Both languages deal with data in their own style. While Python is a *general purpose* language, `R` strength is in resolving problem using vectorial abstractions. Both are beautiful, both are high level, and both fill different user needs. They are not competing but sharing the same information super highway.
 
 
+Alfonso R. Reyes
+
+> This article was originally published in LinkedIn in April 2016.
+
+Link: https://www.linkedin.com/pulse/data-science-petroleum-production-engineering-alfonso-r-reyes
+
+
+
+
 
