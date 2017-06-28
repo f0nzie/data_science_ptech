@@ -8,7 +8,9 @@ knitr::include_graphics(rep("images/logo_p2.jpg", 1))
 
 ## An engineering library
 
-In the past session we got an introduction to the multiwell statistics package showing a few of the things that we can do with an engineering library implemented with Python. Now, we will explore some more functionality. It is incredible the huge amount of information when we get from all the wells in one scan pass. The well data starts to have sense. A well in isolation or standalone doesn’t tell used much about the field or differences between well parameters from well to well. This is where the power of the multiwell scanning scrip resides. 
+In the past session we got an introduction to the multiwell statistics package showing a few of the things that we can do with an engineering library implemented with Python. Now, we will explore some more functionality. 
+
+It is incredible the huge amount of information that we get from all the well models in one scan pass. The well data starts to have sense when you see it in a dataset. A well in isolation or standalone doesn’t tell used much about the field or differences between well parameters from well to well. This is where the power of the multiwell scanning script resides. 
 
 > TODO \
 * what is well scanning? \
@@ -19,25 +21,16 @@ In the past session we got an introduction to the multiwell statistics package s
 
 The multiwell scanning is the process by which we use a Python script to
 automatically open all the well models in the background, pulling the
-user-defined parameters and create an output file where the rows are the wells
-and the well parameters are the columns. In data science parlance, the rows are called `observations` and the columns are the `variables`.
+user-defined parameters and create an output file (raw dataset) where the rows are the wells and the well parameters are the columns. In data science parlance, the rows are called `observations` and the columns are the `variables`.
 
-The scanning open the optimization software, which could be Petex's Prosper, 
+The scanning script opens the optimization software, which could be Petex's Prosper, 
 AppSmiths' WinGLUE or any other application that has a way to share its
-variables and control to the outside. In the case of Petronas, we adopted as a
-standard both. In this example I will use use Prosper. This is how a file with
-the input variables look like:
+variables and being controlled from the outside. In this example I will use use Prosper. This is how a file with the input variables to be scanned looks like:
 
 ![](./images/table.jpg)
 
-These are few of the variables that we want to pull from each of the well models
-to be scanned. Note that the first 7 columns belong to the decomposition of the
-Petex `OpenServer1` variables. I created this input file to make possible a
-repeatable selection process. In one of the datasets we will see 94
-variable-columns; in other maybe less than 40. You can also have a set of input
-workbooks; one for PVT analysis, another for well test, or gas lift, or IPR or
-VLP selection. In another post I will enter in detail about this input
-worksheet.
+These are just few of the variables that we want to pull from each of the well models. Note that the first 7 columns belong to the decomposition of the Petex `OpenServer1` variables. I created this input file to make possible a repeatable selection process in such a way that other engineers can reproduce the process. In one of the datasets we will see 94 variable-columns; in other maybe less than 40. You can also have a set of input workbooks; one for PVT analysis, another for well test, or gas lift, or IPR or
+VLP selection. In another post I will enter in detail about this input worksheet.
 
 The interesting thing to note here is that we can select what well variables we
 will be extracted from each of the well models and written to the dataset. You
@@ -45,8 +38,9 @@ can do this to 10 well, 50 wells, 100 or 1000 wells. You can gain great insights
 from from comparing all the well models at once. Soon it will become evident
 which is one is the most IPR correlation used in the company, what PVT correlations
 give a better matching or which VLP adjust better to the well or field.
+
 > TODO \
-* add statistics for most use IPR
+* add statistics for most used IPR model
 
 
 ## Data frames and data tables
@@ -80,7 +74,7 @@ Some have questioned why we do all this data processing with Python instead of u
 
 Don't get me wrong. I have done terrific things with Excel VBA but it is painful by the lack of an engineering or scientific community behind as is the case with Python or R. Let's say that Excel is good at table visualization that anybody can open, understand it and do some basic plotting around it.
 
-But as you get immersed with Python and pandas you will see that using Excel as data containers is purely optional; there are other powerful data structures available out there.
+But as you get immersed with Python or R you will see that using Excel as data containers is purely optional; there are other powerful data structures available out there.
 
 
 ## Scripting in Python
@@ -91,7 +85,7 @@ The Python script that open the well models and pulls the data is this:
 
 Each of the lines in the script is explained through a comment above. The comments come always after the pound `#` sign. 
 
-Let’s briefly explain what this script does. What we are trying to achieve is reading all the Prosper well models located under the folder PISC. You are interested in reading some variables from these models and putting them in a table-like structure for statistical analysis later. These variables have been defined in the input workbook –explained above. 
+Let’s briefly explain what this script does. What we are trying to achieve is reading all the Prosper well models located under the folder `PISC`. You are interested in reading some variables from these models and putting them in a table-like structure for statistical analysis later. These variables have been defined in the input workbook –explained above. 
 
 ## Loading the dataset
 
@@ -131,7 +125,6 @@ And for the PVT correlations:
 *  can we put all these little plot into one?
 
 
-
 ## What are we learning so far?
 
 At this moment you may be wondering: kind of well modeling is hard; it takes a lot of work. So many variables to take care of. Yes, it is. That’s why getting a network model ready for scenarios and simulation takes so long. Now, imagine if you have to do this analysis by hand, or using the mouse and clicks.
@@ -144,4 +137,9 @@ The advantage here, with the Python scripting library, is that we are acting on 
 * add conclusions \
 * maybe more plots \
 * add code and links to code \
+
+Article originally appeared in LinkedIn: 
+https://www.linkedin.com/pulse/data-science-petroleum-engineering-part-2-acquiring-alfonso-r-reyes
+
+Author: Alfonso R. Reyes
 
