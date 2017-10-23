@@ -9,5 +9,6 @@ rmd_files: ["index.Rmd",
             "p3_ds_for_ppe.Rmd",
             "r_and_the_search.Rmd",
             "how_big_is_your_data.Rmd",
-            "thp_bhp_matching_pdg.Rmd"
+            "thp_bhp_matching_pdg.Rmd",
+            "zFactor017.Rmd"
             ]
